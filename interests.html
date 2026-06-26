@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interests | Levi Ledic</title>
+  <meta
+    name="description"
+    content="A personal interests page for Levi Ledic, featuring design, soccer, technology, hands-on building, and an interactive rotating soccer ball."
+  >
+  <meta name="author" content="Levi Ledic">
+  <meta property="og:title" content="Interests | Levi Ledic">
+  <meta
+    property="og:description"
+    content="A personal interests page for Levi Ledic, featuring design, soccer, technology, hands-on building, and an interactive rotating soccer ball."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://levi-ledic.netlify.app/interests.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interests | Levi Ledic">
+  <meta
+    name="twitter:description"
+    content="A personal interests page for Levi Ledic, featuring design, soccer, technology, hands-on building, and an interactive rotating soccer ball."
+  >
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", storedTheme || (prefersDark ? "dark" : "light"));
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page-interests" data-page="interests">
+  <div class="site-shell">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="navbar">
+      <a href="index.html#top" class="nav-brand" aria-label="Levi Ledic home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-icon" src="favicon-32x32.png" alt="">
+        </span>
+        <span class="nav-name">Levi Ledic</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-nav" aria-label="Main navigation">
+          <a href="index.html" data-page-link="home">Home</a>
+          <a href="experience.html" data-page-link="experience">Experience</a>
+          <a href="interests.html" data-page-link="interests">Interests</a>
+          <a href="#contact" data-page-link="contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero sectionless" id="top">
+        <div class="page-copy">
+          <p class="section-label">Interests</p>
+          <h1>A few things I care about outside of just project work.</h1>
+          <p class="page-lead">
+            Design, movement, useful tools, and hands-on building all shape the way I approach
+            what I make. The work tends to be better when those things stay connected.
+          </p>
+        </div>
+
+        <div class="page-visual text-visual glass-panel">
+          <p>Drag the ball to rotate it.</p>
+          <span>Small interactions can still feel calm and well-made.</span>
+        </div>
+      </section>
+
+      <section class="section soccer-section">
+        <div class="soccer-stage glass-panel">
+          <div class="soccer-orbit" aria-hidden="true"></div>
+          <div class="soccer-ball-shell" data-soccer-ball>
+            <div class="soccer-ball-core">
+              <span class="patch patch-center"></span>
+              <span class="patch patch-top"></span>
+              <span class="patch patch-top-right"></span>
+              <span class="patch patch-right"></span>
+              <span class="patch patch-bottom-right"></span>
+              <span class="patch patch-bottom-left"></span>
+              <span class="patch patch-left"></span>
+              <span class="patch patch-top-left"></span>
+            </div>
+          </div>
+          <p class="soccer-note">Click and drag or swipe to move it.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="section-label">Interests</p>
+          <h2>Things that shape how I build.</h2>
+        </div>
+
+        <div class="interest-grid">
+          <article class="interest-card glass-panel">
+            <h3>Soccer</h3>
+            <p>A personal interest and a good reminder that movement, timing, and teamwork matter outside of screens too.</p>
+          </article>
+
+          <article class="interest-card glass-panel">
+            <h3>Design</h3>
+            <p>I like when things are simple, clear, and easy to understand without needing extra explanation.</p>
+          </article>
+
+          <article class="interest-card glass-panel">
+            <h3>Building</h3>
+            <p>I enjoy taking an idea and turning it into something real, whether it is digital, physical, or somewhere in between.</p>
+          </article>
+
+          <article class="interest-card glass-panel">
+            <h3>Technology</h3>
+            <p>I am interested in technology when it makes something more useful, more organized, or easier to control.</p>
+          </article>
+
+          <article class="interest-card glass-panel">
+            <h3>Hands-On Projects</h3>
+            <p>Robotics, 3D printing, prototypes, and physical builds are interesting because they connect software ideas to real objects.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Reach out.</h2>
+          <p>
+            If you want to talk through an idea, a project direction, or something useful worth
+            building, feel free to send a message.
+          </p>
+        </div>
+
+        <a href="mailto:levi.ledic27@gmail.com" class="button button-primary">Email Levi</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Levi Ledic. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

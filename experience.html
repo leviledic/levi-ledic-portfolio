@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Levi Ledic</title>
+  <meta
+    name="description"
+    content="A clean interactive experience timeline for Levi Ledic, showing project growth across practical systems, dashboards, smart spaces, interactive work, and hands-on building."
+  >
+  <meta name="author" content="Levi Ledic">
+  <meta property="og:title" content="Experience | Levi Ledic">
+  <meta
+    property="og:description"
+    content="A clean interactive experience timeline for Levi Ledic, showing project growth across practical systems, dashboards, smart spaces, interactive work, and hands-on building."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://levi-ledic.netlify.app/experience.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Experience | Levi Ledic">
+  <meta
+    name="twitter:description"
+    content="A clean interactive experience timeline for Levi Ledic, showing project growth across practical systems, dashboards, smart spaces, interactive work, and hands-on building."
+  >
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", storedTheme || (prefersDark ? "dark" : "light"));
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page-experience" data-page="experience">
+  <div class="site-shell">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="navbar">
+      <a href="index.html#top" class="nav-brand" aria-label="Levi Ledic home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-icon" src="favicon-32x32.png" alt="">
+        </span>
+        <span class="nav-name">Levi Ledic</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-nav" aria-label="Main navigation">
+          <a href="index.html" data-page-link="home">Home</a>
+          <a href="experience.html" data-page-link="experience">Experience</a>
+          <a href="interests.html" data-page-link="interests">Interests</a>
+          <a href="#contact" data-page-link="contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero sectionless" id="top">
+        <div class="page-copy">
+          <p class="section-label">Experience</p>
+          <h1>Work that has grown by building, testing, and refining.</h1>
+          <p class="page-lead">
+            A simple timeline of the kinds of work I have moved through, from early project
+            experiments to systems thinking, interactive work, and hands-on building.
+          </p>
+        </div>
+
+        <div class="page-visual glass-panel">
+          <img src="hero-forest.jpg" alt="Forest landscape with a river and distant mountains">
+          <div class="image-gradient"></div>
+          <div class="hero-caption">
+            <span>Click or hover each point to open the timeline.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section timeline-section">
+        <div class="section-heading">
+          <p class="section-label">Timeline</p>
+          <h2>A cleaner view of how the work has evolved.</h2>
+          <p>
+            The details stay broad on purpose. The point is the direction: learning by building,
+            organizing information, designing interfaces, and connecting software ideas to real use.
+          </p>
+        </div>
+
+        <div class="timeline" data-timeline>
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <div class="timeline-item is-open" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="true" aria-controls="timeline-card-1">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Early Projects</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-1">
+              <p class="timeline-phase">Early Projects</p>
+              <h3>Learning by building</h3>
+              <p>Started by experimenting with websites, small tools, and digital projects to understand how ideas become working things.</p>
+            </article>
+          </div>
+
+          <div class="timeline-item" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-2">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Systems</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-2">
+              <p class="timeline-phase">Systems</p>
+              <h3>Workflow thinking</h3>
+              <p>Worked on ways to organize information, route requests, summarize details, and make repeated steps easier to manage.</p>
+            </article>
+          </div>
+
+          <div class="timeline-item" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-3">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Smart Spaces</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-3">
+              <p class="timeline-phase">Smart Spaces</p>
+              <h3>Dashboards and automation</h3>
+              <p>Built dashboards and automations for lighting, rooms, sensors, controls, and smart home ideas designed around real use.</p>
+            </article>
+          </div>
+
+          <div class="timeline-item" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-4">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Interactive Work</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-4">
+              <p class="timeline-phase">Interactive Work</p>
+              <h3>Interfaces and logic</h3>
+              <p>Designed interactive systems with roles, permissions, access rules, admin controls, events, and user-facing interfaces.</p>
+            </article>
+          </div>
+
+          <div class="timeline-item" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-5">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Hands-On Building</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-5">
+              <p class="timeline-phase">Hands-On Building</p>
+              <h3>Robotics and 3D printing</h3>
+              <p>Explored physical projects through robotics, Raspberry Pi ideas, 3D printing, prototypes, and hardware/software experiments.</p>
+            </article>
+          </div>
+
+          <div class="timeline-item" data-timeline-item>
+            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-6">
+              <span class="dot-core"></span>
+              <span class="timeline-label">Now</span>
+            </button>
+            <article class="timeline-card glass-panel" id="timeline-card-6">
+              <p class="timeline-phase">Now</p>
+              <h3>Personal site and project direction</h3>
+              <p>Building a cleaner public site and organizing work in a way that feels personal, useful, and not overly technical.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Reach out.</h2>
+          <p>
+            If you want to talk about a project, a system, a useful tool, or a direction worth
+            building out, feel free to send a message.
+          </p>
+        </div>
+
+        <a href="mailto:levi.ledic27@gmail.com" class="button button-primary">Email Levi</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Levi Ledic. All rights reserved.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

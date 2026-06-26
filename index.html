@@ -1,48 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Levi Ledic | Personal Portfolio</title>
-  <meta name="description" content="Personal portfolio of Levi Ledic, featuring selected projects, creative interests, practical building, design, technology, and hands-on work." />
-  <meta name="author" content="Levi Ledic" />
-
-  <meta property="og:title" content="Levi Ledic | Personal Portfolio" />
-  <meta property="og:description" content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://levi-ledic.netlify.app/" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Levi Ledic | Personal Portfolio" />
-  <meta name="twitter:description" content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building." />
-
-  <link rel="stylesheet" href="style.css" />
+  <meta
+    name="description"
+    content="Personal portfolio of Levi Ledic, featuring selected projects, creative interests, practical building, design, technology, and hands-on work."
+  >
+  <meta name="author" content="Levi Ledic">
+  <meta property="og:title" content="Levi Ledic | Personal Portfolio">
+  <meta
+    property="og:description"
+    content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://levi-ledic.netlify.app/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Levi Ledic | Personal Portfolio">
+  <meta
+    name="twitter:description"
+    content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building."
+  >
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <script>
+    (function () {
+      try {
+        var storedTheme = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", storedTheme || (prefersDark ? "dark" : "light"));
+      } catch (error) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <input type="checkbox" id="theme-toggle" class="theme-checkbox" aria-label="Toggle dark mode" />
-
+<body class="page page-home" data-page="home">
   <div class="site-shell">
-    <div class="ambient ambient-one"></div>
-    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
 
-    <nav class="navbar" aria-label="Main navigation">
-      <a href="#top" class="nav-name">Levi Ledic</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
+    <header class="navbar">
+      <a href="index.html#top" class="nav-brand" aria-label="Levi Ledic home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-icon" src="favicon-32x32.png" alt="">
+        </span>
+        <span class="nav-name">Levi Ledic</span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="nav-menu" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-links" id="site-nav" aria-label="Main navigation">
+          <a href="index.html" data-page-link="home">Home</a>
+          <a href="experience.html" data-page-link="experience">Experience</a>
+          <a href="interests.html" data-page-link="interests">Interests</a>
+          <a href="#contact" data-page-link="contact">Contact</a>
+        </nav>
+
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
       </div>
+    </header>
 
-      <label for="theme-toggle" class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle light or dark mode">
-        <span></span>
-      </label>
-    </nav>
-
-    <main id="top">
-      <section class="hero">
+    <main id="main-content">
+      <section class="hero sectionless" id="top">
         <div class="hero-copy">
           <p class="kicker">Personal portfolio</p>
           <h1>Levi Ledic</h1>
@@ -56,57 +85,41 @@
 
           <div class="hero-actions">
             <a href="#work" class="button button-primary">View work</a>
-            <a href="#about" class="button button-secondary">About me</a>
+            <a href="mailto:levi.ledic27@gmail.com" class="button button-secondary">Contact</a>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Forest landscape visual">
-          <img src="hero-forest.jpg" alt="Dark forest landscape with mountains and a river" />
+        <div class="hero-visual glass-panel" aria-label="Forest landscape visual">
+          <img src="hero-forest.jpg" alt="Dark forest landscape with mountains and a river">
           <div class="image-gradient"></div>
-          <div class="image-caption">
-            <span>Projects, ideas, and useful things.</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section intro-section" id="about">
-        <div class="section-label">About</div>
-        <div class="intro-grid">
-          <h2>Practical, curious, and focused on making things feel clear.</h2>
-          <div class="intro-copy">
-            <p>
-              I like building things that make an idea easier to understand or use. Sometimes that means
-              a website, a dashboard, an automation, a smart setup, an interactive system, or a physical prototype.
-            </p>
-            <p>
-              I care about how things work, but also how they feel to use. The goal is not to make something
-              complicated look impressive. The goal is to make something useful feel simple.
-            </p>
+          <div class="hero-caption">
+            <span>Useful ideas, calmer tools, and projects that feel good to use.</span>
           </div>
         </div>
       </section>
 
       <section class="section" id="work">
         <div class="section-heading">
-          <div class="section-label">Selected work</div>
-          <h2>Things I like building.</h2>
+          <p class="section-label">Selected work</p>
+          <h2>Projects and useful systems, without overdoing the tech part.</h2>
           <p>
-            A broad look at the kinds of projects I work on, without making the whole site feel like a technical resume.
+            A broad look at the kinds of work I like building, from cleaner interfaces to
+            practical workflows, smart spaces, and hands-on projects.
           </p>
         </div>
 
         <div class="work-layout">
-          <article class="feature-card hover-card">
-            <div class="feature-image">
-              <img src="hero-forest.jpg" alt="Moody forest and mountain landscape" />
+          <article class="feature-card hover-card has-media">
+            <div class="feature-image card-media">
+              <img src="hero-forest.jpg" alt="Moody forest and mountain landscape">
               <div class="feature-shade"></div>
             </div>
             <div class="feature-content">
               <span class="card-number">01</span>
               <h3>Useful systems</h3>
               <p>
-                I enjoy taking messy ideas or repeated steps and turning them into something clearer:
-                a flow, a page, a tool, a dashboard, or a process that is easier to use.
+                I enjoy taking messy ideas or repeated steps and turning them into something
+                clearer: a page, a tool, a dashboard, or a process that is easier to use.
               </p>
             </div>
           </article>
@@ -139,55 +152,62 @@
         </div>
       </section>
 
-      <section class="section" id="interests">
-        <div class="section-heading">
-          <div class="section-label">Interests</div>
-          <h2>What it usually connects back to.</h2>
-        </div>
+      <section class="section" id="about">
+        <div class="intro-grid">
+          <div class="intro-heading">
+            <p class="section-label">About</p>
+            <h2>Practical, curious, and focused on making things feel clear.</h2>
+          </div>
 
-        <div class="interest-row">
-          <article>
-            <h3>Design</h3>
-            <p>Making things cleaner, easier to move through, and less annoying to use.</p>
-          </article>
-
-          <article>
-            <h3>Building</h3>
-            <p>Taking ideas out of notes and turning them into something that actually exists.</p>
-          </article>
-
-          <article>
-            <h3>Systems</h3>
-            <p>Organizing moving parts so information, actions, and decisions are easier to handle.</p>
-          </article>
+          <div class="intro-copy">
+            <p>
+              I like building things that make an idea easier to understand or use. Sometimes that
+              means a website, a dashboard, an automation, a smart setup, an interactive system,
+              or a physical prototype.
+            </p>
+            <p>
+              I care about how things work, but also how they feel to use. The goal is not to make
+              something complicated look impressive. The goal is to make something useful feel simple.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="section process-section">
-        <div class="section-label">Process</div>
-        <div class="process-list">
-          <div>
-            <span>01</span>
-            <p>Find the problem or idea.</p>
-          </div>
-          <div>
-            <span>02</span>
-            <p>Break it into clear parts.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <p>Build something usable.</p>
-          </div>
-          <div>
-            <span>04</span>
-            <p>Improve it until it feels clean.</p>
-          </div>
+      <section class="section" id="interests-preview">
+        <div class="section-heading">
+          <p class="section-label">Interests</p>
+          <h2>A few things that keep the work grounded.</h2>
+          <p>
+            I do not want the site to feel only about coding. The way I think about design,
+            movement, building, and useful tools matters just as much.
+          </p>
+        </div>
+
+        <div class="preview-grid">
+          <article class="preview-card glass-panel">
+            <h3>Soccer</h3>
+            <p>A reminder that movement, timing, and teamwork matter outside of screens too.</p>
+          </article>
+
+          <article class="preview-card glass-panel">
+            <h3>Design</h3>
+            <p>I like when things are simple, clear, and easy to understand without extra explanation.</p>
+          </article>
+
+          <article class="preview-card glass-panel">
+            <h3>Building</h3>
+            <p>I enjoy taking an idea and turning it into something real, digital, physical, or in between.</p>
+          </article>
+        </div>
+
+        <div class="section-actions">
+          <a href="interests.html" class="button button-secondary">See interests</a>
         </div>
       </section>
 
       <section class="section contact-section" id="contact">
         <div>
-          <div class="section-label">Contact</div>
+          <p class="section-label">Contact</p>
           <h2>Reach out.</h2>
           <p>
             For projects, ideas, collaboration, websites, dashboards, automation, smart systems,
@@ -200,7 +220,7 @@
     </main>
 
     <footer class="footer">
-      <p>Â© 2026 Levi Ledic. All rights reserved.</p>
+      <p>&copy; 2026 Levi Ledic. All rights reserved.</p>
       <a href="#top">Back to top</a>
     </footer>
   </div>

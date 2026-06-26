@@ -4,4 +4,12 @@
     <loc>https://levi-ledic.netlify.app/</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://levi-ledic.netlify.app/experience.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://levi-ledic.netlify.app/interests.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
