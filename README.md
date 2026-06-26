@@ -17,15 +17,4 @@ https://levi-ledic.netlify.app
 
 ## Purpose
 
-This site showcases Levi Ledic’s work in automation, workflow systems, smart home technology, interactive digital systems, robotics, 3D printing, dashboards, and web projects.
-
-## Project Structure
-
-```text
-index.html
-style.css
-script.js
-robots.txt
-sitemap.xml
-README.md
-```
+This site presents Levi Ledic with a clean personal portfolio focused on projects, ideas, design, technology, hands-on building, and practical work.
