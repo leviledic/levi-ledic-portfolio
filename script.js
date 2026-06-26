@@ -146,6 +146,106 @@ if (brandMark && brandIcon && finePointer && !reduceMotion) {
   resetBrandIcon();
 }
 
+const heroPreview = document.querySelector("[data-hero-preview]");
+
+if (heroPreview) {
+  const previewId = heroPreview.querySelector("[data-preview-id]");
+  const previewTitle = heroPreview.querySelector("[data-preview-title]");
+  const previewDescription = heroPreview.querySelector("[data-preview-description]");
+  const previewItems = [
+    {
+      id: "01",
+      title: "Soccer",
+      description: "Timing, movement, teamwork, and quick decisions."
+    },
+    {
+      id: "02",
+      title: "Design",
+      description: "Clean layouts, simple pages, and things that feel easy to use."
+    },
+    {
+      id: "03",
+      title: "Building",
+      description: "Turning ideas into real projects instead of leaving them as notes."
+    },
+    {
+      id: "04",
+      title: "Smart Spaces",
+      description: "Making rooms, devices, and controls easier to understand and use."
+    },
+    {
+      id: "05",
+      title: "Hands-On Projects",
+      description: "Robotics, 3D printing, prototypes, and physical ideas."
+    },
+    {
+      id: "06",
+      title: "Web Ideas",
+      description: "Simple pages, tools, and interactive ideas that can grow over time."
+    },
+    {
+      id: "07",
+      title: "Learning",
+      description: "Trying new things, testing ideas, and improving what already exists."
+    }
+  ];
+
+  const wait = (duration) =>
+    new Promise((resolve) => {
+      window.setTimeout(resolve, duration);
+    });
+
+  const typeText = async (element, text, speed) => {
+    element.textContent = "";
+
+    for (const character of text) {
+      element.textContent += character;
+      await wait(speed);
+    }
+  };
+
+  const showPreviewItem = (item) => {
+    previewId.textContent = item.id;
+    previewTitle.textContent = item.title;
+    previewDescription.textContent = item.description;
+    heroPreview.classList.add("is-open");
+    heroPreview.classList.remove("is-closing");
+  };
+
+  if (reduceMotion) {
+    showPreviewItem(previewItems[0]);
+  } else {
+    let previewIndex = 0;
+
+    const runPreviewLoop = async () => {
+      while (true) {
+        const item = previewItems[previewIndex];
+
+        previewId.textContent = item.id;
+        previewTitle.textContent = "";
+        previewDescription.textContent = "";
+        heroPreview.classList.remove("is-open");
+        heroPreview.classList.remove("is-closing");
+
+        await wait(220);
+        heroPreview.classList.add("is-open");
+        await wait(240);
+        await typeText(previewTitle, item.title, 42);
+        await wait(80);
+        await typeText(previewDescription, item.description, 18);
+        await wait(1900);
+        heroPreview.classList.add("is-closing");
+        heroPreview.classList.remove("is-open");
+        await wait(480);
+
+        previewIndex = (previewIndex + 1) % previewItems.length;
+      }
+    };
+
+    runPreviewLoop();
+  }
+}
+
 const hoverCards = [...document.querySelectorAll(".hover-card")];
 
 if (finePointer && !reduceMotion) {

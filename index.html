@@ -3,26 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levi Ledic | Personal Portfolio</title>
+  <title>Levi Ledic | Personal Site</title>
   <meta
     name="description"
-    content="Personal portfolio of Levi Ledic, featuring selected projects, creative interests, practical building, design, technology, and hands-on work."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
   >
   <meta name="author" content="Levi Ledic">
-  <meta property="og:title" content="Levi Ledic | Personal Portfolio">
+  <meta property="og:title" content="Levi Ledic | Personal Site">
   <meta
     property="og:description"
-    content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levi-ledic.netlify.app/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Levi Ledic | Personal Portfolio">
+  <meta name="twitter:title" content="Levi Ledic | Personal Site">
   <meta
     name="twitter:description"
-    content="A personal portfolio for Levi Ledic, focused on projects, ideas, design, technology, and practical building."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
   >
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Levi Ledic",
+      "url": "https://levi-ledic.netlify.app/",
+      "email": "mailto:levi.ledic27@gmail.com",
+      "description": "Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology.",
+      "sameAs": [
+        "https://www.instagram.com/leviledic/"
+      ]
+    }
+  </script>
   <script>
     (function () {
       try {
@@ -73,7 +86,7 @@
     <main id="main-content">
       <section class="hero sectionless" id="top">
         <div class="hero-copy">
-          <p class="kicker">Personal portfolio</p>
+          <p class="kicker">Personal site</p>
           <h1>Levi Ledic</h1>
           <p class="hero-line">
             I build useful things across design, technology, automation, and hands-on projects.
@@ -84,16 +97,25 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#work" class="button button-primary">View work</a>
-            <a href="mailto:levi.ledic27@gmail.com" class="button button-secondary">Contact</a>
+            <a href="interests.html" class="button button-primary">View hobbies</a>
+            <a href="#contact" class="button button-secondary">Contact</a>
           </div>
         </div>
 
         <div class="hero-visual glass-panel" aria-label="Forest landscape visual">
           <img src="hero-forest.jpg" alt="Dark forest landscape with mountains and a river">
           <div class="image-gradient"></div>
-          <div class="hero-caption">
-            <span>Useful ideas, calmer tools, and projects that feel good to use.</span>
+          <div class="hero-preview" data-hero-preview aria-live="polite">
+            <div class="hero-preview-head">
+              <span class="preview-index" data-preview-id>01</span>
+              <span class="preview-label">Things I'm into</span>
+            </div>
+            <div class="hero-preview-body">
+              <h3 class="hero-preview-title" data-preview-title>Soccer</h3>
+              <p class="hero-preview-description" data-preview-description>
+                Timing, movement, teamwork, and quick decisions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -101,10 +123,10 @@
       <section class="section" id="work">
         <div class="section-heading">
           <p class="section-label">Selected work</p>
-          <h2>Projects and useful systems, without overdoing the tech part.</h2>
+          <h2>Projects, ideas, and the kinds of things I enjoy building.</h2>
           <p>
-            A broad look at the kinds of work I like building, from cleaner interfaces to
-            practical workflows, smart spaces, and hands-on projects.
+            From web ideas and interface design to smart spaces and hands-on experiments,
+            this is the mix of work that keeps me curious.
           </p>
         </div>
 
@@ -178,8 +200,8 @@
           <p class="section-label">Interests</p>
           <h2>A few things that keep the work grounded.</h2>
           <p>
-            I do not want the site to feel only about coding. The way I think about design,
-            movement, building, and useful tools matters just as much.
+            Soccer, design, learning, and hands-on projects all shape the way I approach
+            what I make and the kinds of ideas I like spending time on.
           </p>
         </div>
 
@@ -213,9 +235,23 @@
             For projects, ideas, collaboration, websites, dashboards, automation, smart systems,
             or anything practical worth building.
           </p>
+          <div class="contact-meta">
+            <a
+              class="social-pill instagram-link"
+              href="https://www.instagram.com/leviledic/?__d=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Levi Ledic on Instagram"
+            >
+              <span class="instagram-icon" aria-hidden="true"></span>
+              <span>@leviledic</span>
+            </a>
+          </div>
         </div>
 
-        <a href="mailto:levi.ledic27@gmail.com" class="button button-primary">Email Levi</a>
+        <div class="contact-actions">
+          <a href="mailto:levi.ledic27@gmail.com" class="button button-primary">Email Levi</a>
+        </div>
       </section>
     </main>
 
