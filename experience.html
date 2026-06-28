@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience | Levi Ledic</title>
+  <title>Experience &amp; Timeline | Levi Ledic</title>
   <meta
     name="description"
-    content="Experience page for Levi Ledic, showing a clean interactive timeline across projects, smart spaces, hands-on building, design, and web ideas."
+    content="A timeline of interests, projects, learning, and things Levi Ledic has worked on over time, including smart spaces, robotics, hands-on building, and web ideas."
   >
   <meta name="author" content="Levi Ledic">
-  <meta property="og:title" content="Experience | Levi Ledic">
+  <meta property="og:title" content="Experience &amp; Timeline | Levi Ledic">
   <meta
     property="og:description"
-    content="Experience page for Levi Ledic, showing a clean interactive timeline across projects, smart spaces, hands-on building, design, and web ideas."
+    content="A timeline of interests, projects, learning, and things Levi Ledic has worked on over time, including smart spaces, robotics, hands-on building, and web ideas."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levi-ledic.netlify.app/experience.html">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Experience | Levi Ledic">
+  <meta name="twitter:title" content="Experience &amp; Timeline | Levi Ledic">
   <meta
     name="twitter:description"
-    content="Experience page for Levi Ledic, showing a clean interactive timeline across projects, smart spaces, hands-on building, design, and web ideas."
+    content="A timeline of interests, projects, learning, and things Levi Ledic has worked on over time, including smart spaces, robotics, hands-on building, and web ideas."
   >
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32[1].png">
   <script>
@@ -34,7 +34,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260627">
 </head>
 <body class="page page-experience" data-page="experience">
   <div class="site-shell">
@@ -73,19 +73,21 @@
     <main id="main-content">
       <section class="page-hero sectionless" id="top">
         <div class="page-copy">
-          <p class="section-label">Experience</p>
-          <h1>Work that has grown by building, testing, and refining.</h1>
+          <p class="section-label">Experience &amp; Timeline</p>
+          <h1>Experience &amp; Timeline</h1>
           <p class="page-lead">
-            A simple timeline of the kinds of work I have moved through, from early project
-            experiments to systems thinking, interactive work, and hands-on building.
+            A timeline of interests, projects, learning, and things I have worked on over time.
           </p>
         </div>
 
         <div class="page-visual glass-panel">
-          <img src="hero-forest.jpg" alt="Forest landscape with a river and distant mountains">
+          <img
+            src="hero-forest.jpg"
+            alt="Mountain forest landscape used as a calm visual on Levi Ledic's experience timeline page"
+          >
           <div class="image-gradient"></div>
           <div class="hero-caption">
-            <span>Click or hover each point to open the timeline.</span>
+            <span>Hover for a quick note. Click or tap for the fuller popup.</span>
           </div>
         </div>
       </section>
@@ -93,86 +95,304 @@
       <section class="section timeline-section">
         <div class="section-heading">
           <p class="section-label">Timeline</p>
-          <h2>A cleaner view of how the work has evolved.</h2>
+          <h2>From early curiosity to current projects.</h2>
           <p>
-            The details stay broad on purpose. The point is the direction: learning by building,
-            organizing information, designing interfaces, and connecting software ideas to real use.
+            The dates stay simple on purpose. They show how interests, learning, hands-on work,
+            and ideas have gradually turned into projects that feel more personal and real.
           </p>
         </div>
 
-        <div class="timeline" data-timeline>
-          <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-shell">
+          <div class="timeline" data-timeline>
+            <div class="timeline-line" aria-hidden="true"></div>
 
-          <div class="timeline-item is-open" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="true" aria-controls="timeline-card-1">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Early Projects</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-1">
-              <p class="timeline-phase">Early Projects</p>
-              <h3>Learning by building</h3>
-              <p>Started by experimenting with websites, small tools, and digital projects to understand how ideas become working things.</p>
-            </article>
-          </div>
+            <div class="timeline-item is-open" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="true"
+                aria-controls="timeline-card-1"
+                aria-label="Open timeline details for Born on Oct 27, 2012"
+                data-timeline-date="Oct 27, 2012"
+                data-timeline-title="Born"
+                data-timeline-description="Levi Ledic was born on October 27, 2012."
+                data-timeline-category="Personal"
+                data-timeline-related="Beginning|Personal"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">Oct 27, 2012</span>
+                <span class="timeline-title">Born</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-1">
+                <p class="timeline-phase">Oct 27, 2012</p>
+                <h3>Born</h3>
+                <p>Levi Ledic was born on October 27, 2012.</p>
+              </article>
+            </div>
 
-          <div class="timeline-item" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-2">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Systems</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-2">
-              <p class="timeline-phase">Systems</p>
-              <h3>Workflow thinking</h3>
-              <p>Worked on ways to organize information, route requests, summarize details, and make repeated steps easier to manage.</p>
-            </article>
-          </div>
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-2"
+                aria-label="Open timeline details for Early Curiosity in 2019"
+                data-timeline-date="2019"
+                data-timeline-title="Early Curiosity"
+                data-timeline-description="Started becoming interested in how websites, games, tools, and digital projects work."
+                data-timeline-category="Interests"
+                data-timeline-related="Web ideas|Learning|Technology"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2019</span>
+                <span class="timeline-title">Early Curiosity</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-2">
+                <p class="timeline-phase">2019</p>
+                <h3>Early Curiosity</h3>
+                <p>Started becoming interested in how websites, games, tools, and digital projects work.</p>
+              </article>
+            </div>
 
-          <div class="timeline-item" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-3">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Smart Spaces</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-3">
-              <p class="timeline-phase">Smart Spaces</p>
-              <h3>Dashboards and automation</h3>
-              <p>Built dashboards and automations for lighting, rooms, sensors, controls, and smart home ideas designed around real use.</p>
-            </article>
-          </div>
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-3"
+                aria-label="Open timeline details for Early Building in 2020"
+                data-timeline-date="2020"
+                data-timeline-title="Early Building"
+                data-timeline-description="Began experimenting more with simple digital projects, ideas, and small creative builds."
+                data-timeline-category="Building"
+                data-timeline-related="Building|Learning|Creative ideas"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2020</span>
+                <span class="timeline-title">Early Building</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-3">
+                <p class="timeline-phase">2020</p>
+                <h3>Early Building</h3>
+                <p>Began experimenting more with simple digital projects, ideas, and small creative builds.</p>
+              </article>
+            </div>
 
-          <div class="timeline-item" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-4">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Interactive Work</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-4">
-              <p class="timeline-phase">Interactive Work</p>
-              <h3>Interfaces and logic</h3>
-              <p>Designed interactive systems with roles, permissions, access rules, admin controls, events, and user-facing interfaces.</p>
-            </article>
-          </div>
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-4"
+                aria-label="Open timeline details for Web and Interactive Ideas in 2021"
+                data-timeline-date="2021"
+                data-timeline-title="Web and Interactive Ideas"
+                data-timeline-description="Started learning more about browser-based projects, simple pages, app ideas, and interactive systems."
+                data-timeline-category="Web"
+                data-timeline-related="Web ideas|Interactive systems|Learning"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2021</span>
+                <span class="timeline-title">Web and Interactive Ideas</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-4">
+                <p class="timeline-phase">2021</p>
+                <h3>Web and Interactive Ideas</h3>
+                <p>Started learning more about browser-based projects, simple pages, app ideas, and interactive systems.</p>
+              </article>
+            </div>
 
-          <div class="timeline-item" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-5">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Hands-On Building</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-5">
-              <p class="timeline-phase">Hands-On Building</p>
-              <h3>Robotics and 3D printing</h3>
-              <p>Explored physical projects through robotics, Raspberry Pi ideas, 3D printing, prototypes, and hardware/software experiments.</p>
-            </article>
-          </div>
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-5"
+                aria-label="Open timeline details for Design and Interfaces in 2022"
+                data-timeline-date="2022"
+                data-timeline-title="Design and Interfaces"
+                data-timeline-description="Became more interested in clean layouts, simple navigation, and how things feel to use."
+                data-timeline-category="Design"
+                data-timeline-related="Design|Interfaces|Usability"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2022</span>
+                <span class="timeline-title">Design and Interfaces</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-5">
+                <p class="timeline-phase">2022</p>
+                <h3>Design and Interfaces</h3>
+                <p>Became more interested in clean layouts, simple navigation, and how things feel to use.</p>
+              </article>
+            </div>
 
-          <div class="timeline-item" data-timeline-item>
-            <button class="timeline-dot" type="button" aria-expanded="false" aria-controls="timeline-card-6">
-              <span class="dot-core"></span>
-              <span class="timeline-label">Now</span>
-            </button>
-            <article class="timeline-card glass-panel" id="timeline-card-6">
-              <p class="timeline-phase">Now</p>
-              <h3>Personal site and project direction</h3>
-              <p>Building a cleaner public site and organizing work in a way that feels personal, useful, and clear.</p>
-            </article>
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-6"
+                aria-label="Open timeline details for Smart Spaces in 2023"
+                data-timeline-date="2023"
+                data-timeline-title="Smart Spaces"
+                data-timeline-description="Explored dashboards, lighting, sensors, controls, and ways to make rooms and devices easier to understand."
+                data-timeline-category="Smart Spaces"
+                data-timeline-related="Smart spaces|Dashboards|Sensors"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2023</span>
+                <span class="timeline-title">Smart Spaces</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-6">
+                <p class="timeline-phase">2023</p>
+                <h3>Smart Spaces</h3>
+                <p>Explored dashboards, lighting, sensors, controls, and ways to make rooms and devices easier to understand.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-7"
+                aria-label="Open timeline details for Robotics and VEX in 2024"
+                data-timeline-date="2024"
+                data-timeline-title="Robotics and VEX"
+                data-timeline-description="Participated on a VEX robotics team and competed at the state level, where the team won an official VEX award."
+                data-timeline-category="Robotics"
+                data-timeline-related="Robotics|VEX Robotics|Competition"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2024</span>
+                <span class="timeline-title">Robotics and VEX</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-7">
+                <p class="timeline-phase">2024</p>
+                <h3>Robotics and VEX</h3>
+                <p>Participated on a VEX robotics team and competed at the state level, where the team won an official VEX award.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-8"
+                aria-label="Open timeline details for Educational Courses in 2024"
+                data-timeline-date="2024"
+                data-timeline-title="Educational Courses"
+                data-timeline-description="Participated in multiple educational USM classes and courses, learning a variety of subjects and skills."
+                data-timeline-category="Learning"
+                data-timeline-related="USM classes|USM courses|Learning"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2024</span>
+                <span class="timeline-title">Educational Courses</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-8">
+                <p class="timeline-phase">2024</p>
+                <h3>Educational Courses</h3>
+                <p>Participated in multiple educational USM classes and courses, learning a variety of subjects and skills.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-9"
+                aria-label="Open timeline details for Hands-On Building in 2025"
+                data-timeline-date="2025"
+                data-timeline-title="Hands-On Building"
+                data-timeline-description="Explored robotics, 3D printing, prototypes, Raspberry Pi and server experiments, small hardware ideas, and physical projects."
+                data-timeline-category="Hands-On Projects"
+                data-timeline-related="3D printing|Robotics|Hands-on projects|Raspberry Pi|Servers"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2025</span>
+                <span class="timeline-title">Hands-On Building</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-9">
+                <p class="timeline-phase">2025</p>
+                <h3>Hands-On Building</h3>
+                <p>Explored robotics, 3D printing, prototypes, Raspberry Pi and server experiments, small hardware ideas, and physical projects.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-10"
+                aria-label="Open timeline details for Web Projects and Tools in 2025"
+                data-timeline-date="2025"
+                data-timeline-title="Web Projects and Tools"
+                data-timeline-description="Worked on browser-based pages, tools, dashboards, and simple interactive ideas."
+                data-timeline-category="Web Ideas"
+                data-timeline-related="Web ideas|Tools|Dashboards"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2025</span>
+                <span class="timeline-title">Web Projects and Tools</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-10">
+                <p class="timeline-phase">2025</p>
+                <h3>Web Projects and Tools</h3>
+                <p>Worked on browser-based pages, tools, dashboards, and simple interactive ideas.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-11"
+                aria-label="Open timeline details for Personal Site in 2026"
+                data-timeline-date="2026"
+                data-timeline-title="Personal Site"
+                data-timeline-description="Started organizing hobbies, projects, interests, and learning into a cleaner public personal site."
+                data-timeline-category="Personal Site"
+                data-timeline-related="Projects|Personal site|Design"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">2026</span>
+                <span class="timeline-title">Personal Site</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-11">
+                <p class="timeline-phase">2026</p>
+                <h3>Personal Site</h3>
+                <p>Started organizing hobbies, projects, interests, and learning into a cleaner public personal site.</p>
+              </article>
+            </div>
+
+            <div class="timeline-item" data-timeline-item>
+              <button
+                class="timeline-dot"
+                type="button"
+                aria-expanded="false"
+                aria-controls="timeline-card-12"
+                aria-label="Open timeline details for Current Focus in the present"
+                data-timeline-date="Present"
+                data-timeline-title="Current Focus"
+                data-timeline-description="Continuing to improve projects, learn new skills, build useful things, and make the site more personal and interactive."
+                data-timeline-category="Current Focus"
+                data-timeline-related="Learning|Projects|Current focus"
+              >
+                <span class="dot-core"></span>
+                <span class="timeline-label">Present</span>
+                <span class="timeline-title">Current Focus</span>
+              </button>
+              <article class="timeline-card glass-panel" id="timeline-card-12">
+                <p class="timeline-phase">Present</p>
+                <h3>Current Focus</h3>
+                <p>Continuing to improve projects, learn new skills, build useful things, and make the site more personal and interactive.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -182,8 +402,8 @@
           <p class="section-label">Contact</p>
           <h2>Reach out.</h2>
           <p>
-            If you want to talk about a project, a system, a useful tool, or a direction worth
-            building out, feel free to send a message.
+            If you want to talk about a project, an idea, a smart setup, a hands-on build, or a
+            direction worth improving, feel free to send a message.
           </p>
           <div class="contact-meta">
             <a
@@ -211,6 +431,6 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260627"></script>
 </body>
 </html>

@@ -6,13 +6,13 @@
   <title>Levi Ledic | Personal Site</title>
   <meta
     name="description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, robotics, 3D printing, smart spaces, web ideas, and technology."
   >
   <meta name="author" content="Levi Ledic">
   <meta property="og:title" content="Levi Ledic | Personal Site">
   <meta
     property="og:description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, robotics, 3D printing, smart spaces, web ideas, and technology."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levi-ledic.netlify.app/">
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Levi Ledic | Personal Site">
   <meta
     name="twitter:description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology."
+    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, robotics, 3D printing, smart spaces, web ideas, and technology."
   >
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32[1].png">
   <script type="application/ld+json">
@@ -30,21 +30,32 @@
       "name": "Levi Ledic",
       "url": "https://levi-ledic.netlify.app/",
       "email": "mailto:levi.ledic27@gmail.com",
-      "description": "Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, and technology.",
+      "description": "Personal site of Levi Ledic, featuring hobbies, projects, interests, creative ideas, hands-on building, design, soccer, robotics, 3D printing, smart spaces, web ideas, and technology.",
       "sameAs": [
         "https://www.instagram.com/leviledic/"
       ],
       "knowsAbout": [
-        "Design",
         "Soccer",
+        "Design",
         "Building",
         "Smart spaces",
+        "Robotics",
+        "VEX Robotics",
+        "3D printing",
         "Hands-on projects",
         "Web ideas",
         "Technology",
-        "3D printing",
-        "Robotics"
+        "Learning"
       ]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Levi Ledic",
+      "url": "https://levi-ledic.netlify.app/",
+      "description": "Personal site of Levi Ledic featuring hobbies, projects, interests, and learning."
     }
   </script>
   <script>
@@ -58,7 +69,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260627">
 </head>
 <body class="page page-home" data-page="home">
   <div class="site-shell">
@@ -103,84 +114,208 @@
             I like building things, trying ideas, and working on projects that feel useful, creative, or fun.
           </p>
           <p class="hero-text">
-            This is a place for the things I'm interested in - hobbies, projects, ideas, and anything I'm learning or building.
+            This is a place for the things I am interested in - hobbies, projects, ideas, and anything I am learning or building.
           </p>
 
           <div class="hero-actions">
-            <a href="#work" class="button button-primary">View hobbies</a>
+            <a href="#work" class="button button-primary">View projects</a>
             <a href="#contact" class="button button-secondary">Contact</a>
           </div>
         </div>
 
         <div class="hero-visual glass-panel" aria-label="Forest landscape visual">
-          <img src="hero-forest.jpg" alt="Dark forest landscape with mountains and a river">
+          <img
+            src="hero-forest.jpg"
+            alt="Mountain forest landscape used as a calm visual on Levi Ledic's personal site"
+          >
           <div class="image-gradient"></div>
-          <div class="hero-preview" data-hero-preview aria-live="polite">
+          <button class="hero-preview" type="button" data-hero-preview aria-describedby="hero-preview-note">
             <div class="hero-preview-head">
               <span class="preview-index" data-preview-id>01</span>
-              <span class="preview-label">Things I'm into</span>
+              <span class="preview-label">Projects</span>
             </div>
-            <div class="hero-preview-body">
+            <div class="hero-preview-body" data-preview-body aria-live="polite">
               <h3 class="hero-preview-title" data-preview-title>Soccer</h3>
               <p class="hero-preview-description" data-preview-description>
                 Timing, movement, teamwork, and quick decisions.
               </p>
             </div>
-          </div>
+            <span class="hero-preview-foot" id="hero-preview-note">Click to view</span>
+          </button>
         </div>
       </section>
 
-      <section class="section" id="work">
+      <section class="section" id="work" itemscope itemtype="https://schema.org/ItemList">
         <div class="section-heading">
           <p class="section-label">Hobbies &amp; Projects</p>
-          <h2>Things I'm into.</h2>
+          <h2>Projects</h2>
           <p>A simple look at the things I like doing, making, learning, and improving.</p>
         </div>
 
         <div class="work-layout">
-          <article class="feature-card hover-card has-media">
-            <div class="feature-image card-media">
-              <img src="hero-forest.jpg" alt="Moody forest and mountain landscape">
-              <div class="feature-shade"></div>
-            </div>
-            <div class="feature-content">
-              <span class="card-number">01</span>
-              <h3>Soccer</h3>
-              <p>
-                A personal interest and something I like because it involves timing, movement, teamwork, and quick decisions.
-              </p>
+          <article
+            class="feature-card hover-card has-media project-card"
+            data-project-card
+            data-project-id="01"
+            role="button"
+            tabindex="0"
+            aria-label="Open project details for Soccer"
+            itemprop="itemListElement"
+            itemscope
+            itemtype="https://schema.org/ListItem"
+          >
+            <meta itemprop="position" content="1">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+              <div class="feature-image card-media">
+                <img
+                  src="hero-forest.jpg"
+                  alt="Mountain forest landscape used as a calm visual for Levi Ledic's soccer and project interests"
+                  itemprop="image"
+                >
+                <div class="feature-shade"></div>
+              </div>
+              <div class="feature-content">
+                <span class="card-number">01</span>
+                <h3 itemprop="name">Soccer</h3>
+                <p itemprop="description">
+                  A personal interest and something I like because it involves timing, movement, teamwork, and quick decisions.
+                </p>
+              </div>
             </div>
           </article>
 
           <div class="small-card-grid">
-            <article class="mini-card hover-card">
-              <span class="card-number">02</span>
-              <h3>Design</h3>
-              <p>I notice when things feel clean, simple, and easy to use. I like layouts that make sense without needing extra explanation.</p>
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="02"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Design"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="2">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">02</span>
+                <h3 itemprop="name">Design</h3>
+                <p itemprop="description">I notice when things feel clean, simple, and easy to use. I like layouts that make sense without needing extra explanation.</p>
+              </div>
             </article>
 
-            <article class="mini-card hover-card">
-              <span class="card-number">03</span>
-              <h3>Building Things</h3>
-              <p>I like turning ideas into real projects, whether that means a page, a tool, a setup, a prototype, or something physical.</p>
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="03"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Building Things"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="3">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">03</span>
+                <h3 itemprop="name">Building Things</h3>
+                <p itemprop="description">I like turning ideas into real projects, whether that means a page, a tool, a setup, a prototype, or something physical.</p>
+              </div>
             </article>
 
-            <article class="mini-card hover-card">
-              <span class="card-number">04</span>
-              <h3>Smart Spaces</h3>
-              <p>I'm interested in making spaces easier to control and understand with dashboards, lighting, sensors, and automations.</p>
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="04"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Smart Spaces"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="4">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">04</span>
+                <h3 itemprop="name">Smart Spaces</h3>
+                <p itemprop="description">I am interested in making spaces easier to control and understand with dashboards, lighting, sensors, and automations.</p>
+              </div>
             </article>
 
-            <article class="mini-card hover-card">
-              <span class="card-number">05</span>
-              <h3>Hands-On Projects</h3>
-              <p>I like experimenting with robotics, 3D printing, small hardware ideas, and physical prototypes.</p>
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="05"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Robotics"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="5">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">05</span>
+                <h3 itemprop="name">Robotics</h3>
+                <p itemprop="description">I participated on a VEX robotics team and competed at the state level, where my team won an official VEX award.</p>
+              </div>
             </article>
 
-            <article class="mini-card hover-card">
-              <span class="card-number">06</span>
-              <h3>Web Ideas</h3>
-              <p>I like making simple web pages, tools, and interactive ideas that are easy to use and can grow over time.</p>
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="06"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Hands-On Projects"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="6">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">06</span>
+                <h3 itemprop="name">Hands-On Projects</h3>
+                <p itemprop="description">I like experimenting with robotics, 3D printing, small hardware ideas, and physical prototypes.</p>
+              </div>
+            </article>
+
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="07"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Web Ideas"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="7">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">07</span>
+                <h3 itemprop="name">Web Ideas</h3>
+                <p itemprop="description">I like making simple web pages, tools, and interactive ideas that are easy to use and can grow over time.</p>
+              </div>
+            </article>
+
+            <article
+              class="mini-card hover-card project-card"
+              data-project-card
+              data-project-id="08"
+              role="button"
+              tabindex="0"
+              aria-label="Open project details for Learning"
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <meta itemprop="position" content="8">
+              <div itemprop="item" itemscope itemtype="https://schema.org/Thing">
+                <span class="card-number">08</span>
+                <h3 itemprop="name">Learning</h3>
+                <p itemprop="description">I have participated in multiple educational USM classes and courses, learning a variety of things through structured and hands-on learning.</p>
+              </div>
             </article>
           </div>
         </div>
@@ -210,10 +345,10 @@
       <section class="section" id="interests-preview">
         <div class="section-heading">
           <p class="section-label">Interests</p>
-          <h2>A few things that keep the work grounded.</h2>
+          <h2>A few things behind the projects.</h2>
           <p>
-            Soccer, design, learning, and hands-on projects all shape the way I approach
-            what I make and the kinds of ideas I like spending time on.
+            Soccer, design, learning, robotics, and hands-on projects all shape the kinds of ideas
+            I keep coming back to and the way I try to make things feel clear.
           </p>
         </div>
 
@@ -224,13 +359,13 @@
           </article>
 
           <article class="preview-card glass-panel">
-            <h3>Design</h3>
-            <p>I like when things are simple, clear, and easy to understand without extra explanation.</p>
+            <h3>Robotics</h3>
+            <p>Building, testing, competing, and learning all connect in a way that feels real and hands-on.</p>
           </article>
 
           <article class="preview-card glass-panel">
-            <h3>Building</h3>
-            <p>I enjoy taking an idea and turning it into something real, digital, physical, or in between.</p>
+            <h3>Learning</h3>
+            <p>I like ideas that keep growing through class work, small experiments, and improving what already exists.</p>
           </article>
         </div>
 
@@ -273,6 +408,6 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260627"></script>
 </body>
 </html>

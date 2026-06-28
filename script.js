@@ -8,6 +8,67 @@ const themeToggle = document.querySelector("[data-theme-toggle]");
 const contactSection = document.querySelector("#contact");
 const currentPage = body.dataset.page || "home";
 
+const projectItems = [
+  {
+    id: "01",
+    title: "Soccer",
+    shortDescription: "Timing, movement, teamwork, and quick decisions.",
+    detail: "Soccer is one of my personal interests because it involves movement, awareness, timing, teamwork, and quick decisions.",
+    tags: ["Soccer", "Movement", "Teamwork"]
+  },
+  {
+    id: "02",
+    title: "Design",
+    shortDescription: "Clean layouts, simple pages, and things that feel easy to use.",
+    detail: "I like design when it feels simple, calm, and easy to understand without needing extra explanation.",
+    tags: ["Design", "Layout", "Clarity"]
+  },
+  {
+    id: "03",
+    title: "Building",
+    shortDescription: "Turning ideas into real projects instead of leaving them as notes.",
+    detail: "I like taking ideas and making them real, whether that means a page, a tool, a setup, a prototype, or something physical.",
+    tags: ["Building", "Projects", "Prototypes"]
+  },
+  {
+    id: "04",
+    title: "Smart Spaces",
+    shortDescription: "Making rooms, devices, and controls easier to understand and use.",
+    detail: "I'm interested in smart spaces because they connect real rooms, controls, sensors, dashboards, and everyday routines.",
+    tags: ["Smart Spaces", "Dashboards", "Sensors"]
+  },
+  {
+    id: "05",
+    title: "Robotics",
+    shortDescription: "Building, testing, competing, and learning through robotics.",
+    detail: "I participated on a VEX robotics team and competed at the state level, where my team won an official VEX award.",
+    tags: ["Robotics", "VEX Robotics", "Competition"]
+  },
+  {
+    id: "06",
+    title: "Hands-On Projects",
+    shortDescription: "3D printing, prototypes, hardware ideas, and physical builds.",
+    detail: "I like hands-on projects because they combine physical building with problem-solving, testing, and improving.",
+    tags: ["Hands-On Projects", "3D Printing", "Hardware"]
+  },
+  {
+    id: "07",
+    title: "Web Ideas",
+    shortDescription: "Simple pages, tools, and interactive ideas that can grow over time.",
+    detail: "I like web ideas that start simple but can turn into useful tools, dashboards, or interactive experiences.",
+    tags: ["Web Ideas", "Tools", "Interactive"]
+  },
+  {
+    id: "08",
+    title: "Learning",
+    shortDescription: "Trying new things, taking classes, and improving what already exists.",
+    detail: "I have participated in multiple educational USM classes and courses, learning a variety of subjects and skills through hands-on and structured learning.",
+    tags: ["Learning", "USM Classes", "USM Courses"]
+  }
+];
+
+const projectItemsById = Object.fromEntries(projectItems.map((item) => [item.id, item]));
+
 const applyTheme = (theme, persist = true) => {
   root.setAttribute("data-theme", theme);
 
@@ -64,13 +125,6 @@ navLinks.forEach((link) => {
     body.classList.remove("menu-open");
     navMenuButton?.setAttribute("aria-expanded", "false");
   });
-});
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    body.classList.remove("menu-open");
-    navMenuButton?.setAttribute("aria-expanded", "false");
-  }
 });
 
 window.addEventListener("resize", () => {
@@ -146,106 +200,6 @@ if (brandMark && brandIcon && finePointer && !reduceMotion) {
   resetBrandIcon();
 }
 
-const heroPreview = document.querySelector("[data-hero-preview]");
-
-if (heroPreview) {
-  const previewId = heroPreview.querySelector("[data-preview-id]");
-  const previewTitle = heroPreview.querySelector("[data-preview-title]");
-  const previewDescription = heroPreview.querySelector("[data-preview-description]");
-  const previewItems = [
-    {
-      id: "01",
-      title: "Soccer",
-      description: "Timing, movement, teamwork, and quick decisions."
-    },
-    {
-      id: "02",
-      title: "Design",
-      description: "Clean layouts, simple pages, and things that feel easy to use."
-    },
-    {
-      id: "03",
-      title: "Building",
-      description: "Turning ideas into real projects instead of leaving them as notes."
-    },
-    {
-      id: "04",
-      title: "Smart Spaces",
-      description: "Making rooms, devices, and controls easier to understand and use."
-    },
-    {
-      id: "05",
-      title: "Hands-On Projects",
-      description: "Robotics, 3D printing, prototypes, and physical ideas."
-    },
-    {
-      id: "06",
-      title: "Web Ideas",
-      description: "Simple pages, tools, and interactive ideas that can grow over time."
-    },
-    {
-      id: "07",
-      title: "Learning",
-      description: "Trying new things, testing ideas, and improving what already exists."
-    }
-  ];
-
-  const wait = (duration) =>
-    new Promise((resolve) => {
-      window.setTimeout(resolve, duration);
-    });
-
-  const typeText = async (element, text, speed) => {
-    element.textContent = "";
-
-    for (const character of text) {
-      element.textContent += character;
-      await wait(speed);
-    }
-  };
-
-  const showPreviewItem = (item) => {
-    previewId.textContent = item.id;
-    previewTitle.textContent = item.title;
-    previewDescription.textContent = item.description;
-    heroPreview.classList.add("is-open");
-    heroPreview.classList.remove("is-closing");
-  };
-
-  if (reduceMotion) {
-    showPreviewItem(previewItems[0]);
-  } else {
-    let previewIndex = 0;
-
-    const runPreviewLoop = async () => {
-      while (true) {
-        const item = previewItems[previewIndex];
-
-        previewId.textContent = item.id;
-        previewTitle.textContent = "";
-        previewDescription.textContent = "";
-        heroPreview.classList.remove("is-open");
-        heroPreview.classList.remove("is-closing");
-
-        await wait(220);
-        heroPreview.classList.add("is-open");
-        await wait(240);
-        await typeText(previewTitle, item.title, 42);
-        await wait(80);
-        await typeText(previewDescription, item.description, 18);
-        await wait(1900);
-        heroPreview.classList.add("is-closing");
-        heroPreview.classList.remove("is-open");
-        await wait(480);
-
-        previewIndex = (previewIndex + 1) % previewItems.length;
-      }
-    };
-
-    runPreviewLoop();
-  }
-}
-
 const hoverCards = [...document.querySelectorAll(".hover-card")];
 
 if (finePointer && !reduceMotion) {
@@ -257,6 +211,7 @@ if (finePointer && !reduceMotion) {
       card.style.setProperty("--card-rotate-y", "0deg");
       card.style.setProperty("--card-lift", "0px");
       card.style.setProperty("--card-scale", "1");
+
       if (media) {
         media.style.transform = "scale(1)";
         media.style.filter = "brightness(0.9) contrast(1)";
@@ -287,11 +242,276 @@ if (finePointer && !reduceMotion) {
   });
 }
 
+const getFocusableElements = (element) =>
+  [...element.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')].filter(
+    (item) => !item.hasAttribute("hidden")
+  );
+
+const detailModal = (() => {
+  const container = document.createElement("div");
+  container.className = "detail-modal";
+  container.hidden = true;
+  container.innerHTML = `
+    <div class="detail-modal-backdrop" data-modal-backdrop></div>
+    <div
+      class="detail-modal-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="detail-modal-title"
+      aria-describedby="detail-modal-copy"
+    >
+      <div class="detail-modal-head">
+        <div class="detail-modal-heading">
+          <span class="detail-modal-index" data-modal-index></span>
+          <span class="detail-modal-label" data-modal-label></span>
+        </div>
+        <button type="button" class="detail-modal-close" data-modal-close aria-label="Close project popup">X</button>
+      </div>
+      <h2 class="detail-modal-title" id="detail-modal-title" data-modal-title></h2>
+      <p class="detail-modal-copy" id="detail-modal-copy" data-modal-copy></p>
+      <div class="detail-modal-meta" data-modal-meta></div>
+      <div class="detail-modal-tags" data-modal-tags></div>
+    </div>
+  `;
+
+  document.body.appendChild(container);
+
+  const panel = container.querySelector(".detail-modal-panel");
+  const closeButton = container.querySelector("[data-modal-close]");
+  const backdrop = container.querySelector("[data-modal-backdrop]");
+  const indexNode = container.querySelector("[data-modal-index]");
+  const labelNode = container.querySelector("[data-modal-label]");
+  const titleNode = container.querySelector("[data-modal-title]");
+  const copyNode = container.querySelector("[data-modal-copy]");
+  const metaNode = container.querySelector("[data-modal-meta]");
+  const tagsNode = container.querySelector("[data-modal-tags]");
+
+  let lastFocusedElement = null;
+
+  const renderMetaItem = (label, value) => `
+    <div class="detail-modal-meta-item">
+      <span class="detail-modal-meta-label">${label}</span>
+      <span class="detail-modal-meta-value">${value}</span>
+    </div>
+  `;
+
+  const close = () => {
+    if (container.hidden) {
+      return;
+    }
+
+    container.hidden = true;
+    body.classList.remove("modal-open");
+
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  };
+
+  const trapFocus = (event) => {
+    if (event.key !== "Tab") {
+      return;
+    }
+
+    const focusable = getFocusableElements(panel);
+
+    if (!focusable.length) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
+  panel.addEventListener("keydown", trapFocus);
+
+  container.addEventListener("click", (event) => {
+    if (event.target === backdrop) {
+      close();
+    }
+  });
+
+  closeButton.addEventListener("click", close);
+
+  const open = (payload, triggerElement) => {
+    lastFocusedElement = triggerElement || document.activeElement;
+
+    indexNode.textContent = payload.indexText || "";
+    labelNode.textContent = payload.label || "";
+    titleNode.textContent = payload.title || "";
+    copyNode.textContent = payload.detail || "";
+
+    metaNode.innerHTML = "";
+    tagsNode.innerHTML = "";
+
+    if (payload.date) {
+      metaNode.insertAdjacentHTML("beforeend", renderMetaItem("Date", payload.date));
+    }
+
+    if (payload.category) {
+      metaNode.insertAdjacentHTML("beforeend", renderMetaItem("Category", payload.category));
+    }
+
+    if (payload.related && payload.related.length) {
+      metaNode.insertAdjacentHTML("beforeend", renderMetaItem("Related", payload.related.join(", ")));
+    }
+
+    if (payload.tags && payload.tags.length) {
+      payload.tags.forEach((tag) => {
+        const chip = document.createElement("span");
+        chip.className = "detail-modal-tag";
+        chip.textContent = tag;
+        tagsNode.appendChild(chip);
+      });
+    }
+
+    metaNode.hidden = !metaNode.children.length;
+    tagsNode.hidden = !tagsNode.children.length;
+
+    container.hidden = false;
+    body.classList.add("modal-open");
+    closeButton.focus();
+  };
+
+  return { open, close, container };
+})();
+
+const buildProjectModalPayload = (projectId) => {
+  const project = projectItemsById[projectId];
+
+  if (!project) {
+    return null;
+  }
+
+  return {
+    indexText: project.id,
+    label: "Projects",
+    title: project.title,
+    detail: project.detail,
+    tags: project.tags
+  };
+};
+
+const buildTimelineModalPayload = (button) => ({
+  indexText: button.dataset.timelineDate || "",
+  date: button.dataset.timelineDate || "",
+  label: "Timeline",
+  title: button.dataset.timelineTitle || "",
+  detail: button.dataset.timelineDescription || "",
+  category: button.dataset.timelineCategory || "",
+  related: button.dataset.timelineRelated
+    ? button.dataset.timelineRelated.split("|").map((item) => item.trim()).filter(Boolean)
+    : []
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    if (!detailModal.container.hidden) {
+      detailModal.close();
+      return;
+    }
+
+    body.classList.remove("menu-open");
+    navMenuButton?.setAttribute("aria-expanded", "false");
+  }
+});
+
+const projectCards = [...document.querySelectorAll("[data-project-card]")];
+
+const openProjectModal = (projectId, triggerElement) => {
+  const payload = buildProjectModalPayload(projectId);
+
+  if (payload) {
+    detailModal.open(payload, triggerElement);
+  }
+};
+
+const activateOnEnter = (element, handler) => {
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      handler();
+    }
+  });
+};
+
+projectCards.forEach((card) => {
+  const { projectId } = card.dataset;
+
+  card.addEventListener("click", () => openProjectModal(projectId, card));
+  activateOnEnter(card, () => openProjectModal(projectId, card));
+});
+
+const heroPreview = document.querySelector("[data-hero-preview]");
+
+if (heroPreview) {
+  const previewId = heroPreview.querySelector("[data-preview-id]");
+  const previewTitle = heroPreview.querySelector("[data-preview-title]");
+  const previewDescription = heroPreview.querySelector("[data-preview-description]");
+  let currentPreviewId = "";
+  let previewTimer = null;
+
+  const updatePreviewContent = (item) => {
+    heroPreview.dataset.projectId = item.id;
+    heroPreview.setAttribute("aria-label", `Open project details for ${item.title}`);
+    previewId.textContent = item.id;
+    previewTitle.textContent = item.title;
+    previewDescription.textContent = item.shortDescription;
+    currentPreviewId = item.id;
+  };
+
+  const getNextProject = () => {
+    const availableItems = projectItems.filter((item) => item.id !== currentPreviewId);
+    return availableItems[Math.floor(Math.random() * availableItems.length)];
+  };
+
+  const schedulePreviewSwap = () => {
+    const delay = 7000 + Math.floor(Math.random() * 3001);
+
+    previewTimer = window.setTimeout(() => {
+      const nextItem = getNextProject();
+
+      if (!reduceMotion) {
+        heroPreview.classList.add("is-transitioning");
+        window.setTimeout(() => {
+          updatePreviewContent(nextItem);
+          heroPreview.classList.remove("is-transitioning");
+        }, 220);
+      } else {
+        updatePreviewContent(nextItem);
+      }
+
+      schedulePreviewSwap();
+    }, delay);
+  };
+
+  updatePreviewContent(projectItems[Math.floor(Math.random() * projectItems.length)]);
+  schedulePreviewSwap();
+
+  heroPreview.addEventListener("click", () => openProjectModal(currentPreviewId, heroPreview));
+  activateOnEnter(heroPreview, () => openProjectModal(currentPreviewId, heroPreview));
+
+  window.addEventListener("beforeunload", () => {
+    if (previewTimer) {
+      window.clearTimeout(previewTimer);
+    }
+  });
+}
+
 const timeline = document.querySelector("[data-timeline]");
 
 if (timeline) {
   const items = [...timeline.querySelectorAll("[data-timeline-item]")];
-  let lockedIndex = null;
+  let activeIndex = 0;
 
   const openTimelineItem = (index) => {
     items.forEach((item, itemIndex) => {
@@ -303,43 +523,34 @@ if (timeline) {
   };
 
   const previewTimelineItem = (index) => {
-    if (window.innerWidth > 860 && finePointer && lockedIndex === null) {
-      openTimelineItem(index);
-    }
+    activeIndex = index;
+    openTimelineItem(index);
   };
 
-  openTimelineItem(0);
+  openTimelineItem(activeIndex);
 
   items.forEach((item, index) => {
     const button = item.querySelector(".timeline-dot");
 
-    item.addEventListener("pointerenter", () => previewTimelineItem(index));
-    item.addEventListener("pointermove", () => previewTimelineItem(index));
-    button?.addEventListener("pointerenter", () => previewTimelineItem(index));
-    button?.addEventListener("pointermove", () => previewTimelineItem(index));
-    button?.addEventListener("focus", () => previewTimelineItem(index));
+    if (!button) {
+      return;
+    }
 
-    button?.addEventListener("click", () => {
-      if (lockedIndex === index) {
-        lockedIndex = null;
-        openTimelineItem(index);
-      } else {
-        lockedIndex = index;
-        openTimelineItem(index);
-      }
+    if (finePointer) {
+      item.addEventListener("pointerenter", () => previewTimelineItem(index));
+      button.addEventListener("pointermove", () => previewTimelineItem(index));
+    }
+
+    button.addEventListener("focus", () => previewTimelineItem(index));
+    button.addEventListener("click", () => {
+      previewTimelineItem(index);
+      detailModal.open(buildTimelineModalPayload(button), button);
     });
   });
 
   timeline.addEventListener("pointerleave", () => {
-    if (window.innerWidth > 860 && lockedIndex === null) {
-      openTimelineItem(0);
-    }
-  });
-
-  document.addEventListener("click", (event) => {
-    if (window.innerWidth > 860 && lockedIndex !== null && !timeline.contains(event.target)) {
-      lockedIndex = null;
-      openTimelineItem(0);
+    if (window.innerWidth > 860) {
+      openTimelineItem(activeIndex);
     }
   });
 }
@@ -359,7 +570,7 @@ if (soccerBall) {
   let lastY = 0;
 
   const renderBall = () => {
-    core.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+    core.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) rotateZ(10deg)`;
   };
 
   const animateBall = () => {

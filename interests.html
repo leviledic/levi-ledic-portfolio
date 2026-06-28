@@ -6,13 +6,13 @@
   <title>Hobbies &amp; Interests | Levi Ledic</title>
   <meta
     name="description"
-    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, hands-on projects, technology, and an interactive rotating soccer ball."
+    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, smart spaces, robotics, web ideas, learning, hands-on projects, and an interactive 3D soccer ball."
   >
   <meta name="author" content="Levi Ledic">
   <meta property="og:title" content="Hobbies &amp; Interests | Levi Ledic">
   <meta
     property="og:description"
-    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, hands-on projects, technology, and an interactive rotating soccer ball."
+    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, smart spaces, robotics, web ideas, learning, hands-on projects, and an interactive 3D soccer ball."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://levi-ledic.netlify.app/interests.html">
@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Hobbies &amp; Interests | Levi Ledic">
   <meta
     name="twitter:description"
-    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, hands-on projects, technology, and an interactive rotating soccer ball."
+    content="Hobbies and interests page for Levi Ledic, featuring soccer, design, building, smart spaces, robotics, web ideas, learning, hands-on projects, and an interactive 3D soccer ball."
   >
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32[1].png">
   <script>
@@ -34,7 +34,7 @@
       }
     })();
   </script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260627">
 </head>
 <body class="page page-interests" data-page="interests">
   <div class="site-shell">
@@ -74,23 +74,28 @@
       <section class="page-hero sectionless" id="top">
         <div class="page-copy">
           <p class="section-label">Hobbies &amp; Interests</p>
-          <h1>A few things I care about outside of just project work.</h1>
+          <h1>Things I like spending time on, learning from, and building around.</h1>
           <p class="page-lead">
             Design, movement, useful tools, and hands-on building all shape the way I approach
-            what I make. The work tends to be better when those things stay connected.
+            what I make. The work tends to feel better when those things stay connected.
           </p>
         </div>
 
         <div class="page-visual text-visual glass-panel">
           <p>Drag the ball to rotate it.</p>
-          <span>Small interactions can still feel calm and well-made.</span>
+          <span>A small interaction here should still feel calm, clean, and a little more real.</span>
         </div>
       </section>
 
       <section class="section soccer-section">
         <div class="soccer-stage glass-panel">
           <div class="soccer-orbit" aria-hidden="true"></div>
-          <div class="soccer-ball-shell" data-soccer-ball>
+          <div
+            class="soccer-ball-shell"
+            data-soccer-ball
+            role="img"
+            aria-label="Interactive 3D soccer ball representing Levi Ledic's interest in soccer"
+          >
             <div class="soccer-ball-core">
               <span class="patch patch-center"></span>
               <span class="patch patch-top"></span>
@@ -110,32 +115,59 @@
         <div class="section-heading">
           <p class="section-label">Hobbies &amp; Interests</p>
           <h2>Things that shape how I build.</h2>
+          <p>
+            These are some of the interests and project directions that keep showing up again,
+            whether I am learning something new, improving an old idea, or making something more useful.
+          </p>
         </div>
 
         <div class="interest-grid">
-          <article class="interest-card glass-panel">
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="01" role="button" tabindex="0" aria-label="Open project details for Soccer">
+            <span class="card-number">01</span>
             <h3>Soccer</h3>
-            <p>A personal interest and a good reminder that movement, timing, and teamwork matter outside of screens too.</p>
+            <p>A personal interest and something I like because it involves timing, movement, teamwork, and quick decisions.</p>
           </article>
 
-          <article class="interest-card glass-panel">
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="02" role="button" tabindex="0" aria-label="Open project details for Design">
+            <span class="card-number">02</span>
             <h3>Design</h3>
-            <p>I like when things are simple, clear, and easy to understand without needing extra explanation.</p>
+            <p>I notice when things feel clean, simple, and easy to use. I like layouts that make sense without needing extra explanation.</p>
           </article>
 
-          <article class="interest-card glass-panel">
-            <h3>Building</h3>
-            <p>I enjoy taking an idea and turning it into something real, whether it is digital, physical, or somewhere in between.</p>
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="03" role="button" tabindex="0" aria-label="Open project details for Building Things">
+            <span class="card-number">03</span>
+            <h3>Building Things</h3>
+            <p>I like turning ideas into real projects, whether that means a page, a tool, a setup, a prototype, or something physical.</p>
           </article>
 
-          <article class="interest-card glass-panel">
-            <h3>Technology</h3>
-            <p>I am interested in technology when it makes something more useful, more organized, or easier to control.</p>
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="04" role="button" tabindex="0" aria-label="Open project details for Smart Spaces">
+            <span class="card-number">04</span>
+            <h3>Smart Spaces</h3>
+            <p>I am interested in making spaces easier to control and understand with dashboards, lighting, sensors, and automations.</p>
           </article>
 
-          <article class="interest-card glass-panel">
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="05" role="button" tabindex="0" aria-label="Open project details for Robotics">
+            <span class="card-number">05</span>
+            <h3>Robotics</h3>
+            <p>I participated on a VEX robotics team and competed at the state level, where my team won an official VEX award.</p>
+          </article>
+
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="06" role="button" tabindex="0" aria-label="Open project details for Hands-On Projects">
+            <span class="card-number">06</span>
             <h3>Hands-On Projects</h3>
-            <p>Robotics, 3D printing, prototypes, and physical builds are interesting because they connect software ideas to real objects.</p>
+            <p>I like experimenting with robotics, 3D printing, small hardware ideas, and physical prototypes.</p>
+          </article>
+
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="07" role="button" tabindex="0" aria-label="Open project details for Web Ideas">
+            <span class="card-number">07</span>
+            <h3>Web Ideas</h3>
+            <p>I like making simple web pages, tools, and interactive ideas that are easy to use and can grow over time.</p>
+          </article>
+
+          <article class="interest-card glass-panel project-card" data-project-card data-project-id="08" role="button" tabindex="0" aria-label="Open project details for Learning">
+            <span class="card-number">08</span>
+            <h3>Learning</h3>
+            <p>I have participated in multiple educational USM classes and courses, learning a variety of things through structured and hands-on learning.</p>
           </article>
         </div>
       </section>
@@ -174,6 +206,6 @@
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260627"></script>
 </body>
 </html>
