@@ -10,4 +10,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://levi-ledic.netlify.app/sitemap.xml
+Sitemap: https://leviledic.github.io/levi-ledic-portfolio/sitemap.xml
