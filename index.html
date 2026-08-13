@@ -26,6 +26,7 @@
     href="https://leviledic.github.io/levi-ledic-portfolio/"
   >
 
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Levi Ledic">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Levi Ledic | Official Profile">
@@ -54,6 +55,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
 
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Levi Ledic | Official Profile">
 
@@ -67,6 +69,12 @@
     content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png"
   >
 
+  <meta
+    name="twitter:image:alt"
+    content="Official profile of Levi Ledic"
+  >
+
+  <!-- Favicon -->
   <link
     rel="icon"
     type="image/png"
@@ -74,8 +82,10 @@
     href="favicon-32x32.png"
   >
 
-  <link rel="stylesheet" href="./style.css?v=3">
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css?v=4">
 
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -159,9 +169,10 @@
   >
 
   <div class="theme-wrapper">
-    <div class="mesh-container" aria-hidden="true">
-      <div class="mesh-ball ball-1"></div>
-      <div class="mesh-ball ball-2"></div>
+    <div class="background-effects" aria-hidden="true">
+      <div class="background-grid"></div>
+      <div class="background-light light-blue"></div>
+      <div class="background-light light-orange"></div>
     </div>
 
     <nav class="navbar" aria-label="Main navigation">
@@ -177,23 +188,21 @@
 
       <label
         for="theme-toggle"
-        class="ghost-toggle"
+        class="theme-toggle"
         aria-label="Change color theme"
         title="Change color theme"
-      ></label>
+      >
+        <span class="theme-toggle-dot"></span>
+      </label>
     </nav>
 
     <main>
       <header class="hero" id="profile">
-        <div class="hero-glass">
-          <p class="hero-label">Profile</p>
+        <h1>Levi Ledic</h1>
 
-          <h1>Levi Ledic</h1>
-
-          <p class="hero-description">
-            Student, builder, soccer player, and robotics competitor.
-          </p>
-        </div>
+        <p>
+          Student, builder, soccer player, and robotics competitor.
+        </p>
       </header>
 
       <section
