@@ -91,7 +91,7 @@ body {
     color var(--transition);
 }
 
-/* Background */
+/* Subtle background */
 
 .background-effects {
   position: fixed;
@@ -172,7 +172,7 @@ main,
   z-index: 2;
 }
 
-/* Navbar */
+/* Apple-style glass navigation */
 
 .navbar {
   position: fixed;
@@ -247,8 +247,7 @@ main,
   cursor: pointer;
   transition:
     border-color var(--transition),
-    transform 0.2s ease,
-    opacity 0.2s ease;
+    transform 0.2s ease;
 }
 
 .theme-toggle:hover {
@@ -286,9 +285,7 @@ main,
   position: relative;
   color: inherit;
   text-decoration: none;
-  transition:
-    color 0.2s ease,
-    opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .hero-link::after {
@@ -315,18 +312,19 @@ main,
   transform: scaleX(1);
 }
 
-/* Cards */
+/* 75 / 25 profile layout */
 
-.projects-grid {
+.profile-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 30px;
+  grid-template-columns: minmax(0, 3fr) minmax(250px, 1fr);
+  gap: 24px;
   width: min(calc(100% - 40px), 1120px);
   margin: 0 auto;
   padding: 0 0 100px;
 }
 
-.project-card {
+.profile-card {
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--border);
   border-top-color: var(--border-highlight);
@@ -342,18 +340,12 @@ main,
     box-shadow var(--transition);
 }
 
-.project-card:hover {
-  border-color: rgba(0, 122, 255, 0.52);
+.profile-card:hover {
+  border-color: rgba(0, 122, 255, 0.48);
   box-shadow:
     0 28px 70px rgba(0, 0, 0, 0.24),
-    0 0 35px rgba(0, 122, 255, 0.06);
-  transform: translateY(-9px);
-}
-
-.theme-checkbox:checked ~ .theme-wrapper .project-card:hover {
-  box-shadow:
-    0 28px 65px rgba(38, 48, 70, 0.14),
-    0 0 35px rgba(0, 122, 255, 0.06);
+    0 0 35px rgba(0, 122, 255, 0.05);
+  transform: translateY(-7px);
 }
 
 .card-image-wrapper {
@@ -371,7 +363,7 @@ main,
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.025),
-    rgba(0, 0, 0, 0.12)
+    rgba(0, 0, 0, 0.15)
   );
   pointer-events: none;
 }
@@ -396,51 +388,99 @@ main,
   filter: grayscale(1) brightness(1);
 }
 
-.project-card:hover .card-image,
-.theme-checkbox:checked ~ .theme-wrapper .project-card:hover .card-image {
+.profile-card:hover .card-image,
+.theme-checkbox:checked ~ .theme-wrapper .profile-card:hover .card-image {
   filter: grayscale(0) brightness(1);
-  transform: scale(1.075);
+  transform: scale(1.06);
 }
 
 .card-info {
   padding: 2rem;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+.about-info {
+  max-width: 730px;
 }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 10px;
-  border: 1px solid var(--border);
-  border-top-color: var(--border-highlight);
-  border-radius: 100px;
-  background: var(--glass-tag);
-  color: var(--text);
-  font-size: 0.7rem;
-  line-height: 1.5;
-  opacity: 0.72;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+.card-label {
+  margin-bottom: 9px;
+  color: var(--secondary-text);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 
 .card-info h2 {
-  margin: 14px 0 8px;
+  margin: 0 0 12px;
   color: var(--text);
-  font-size: 1.17rem;
+  font-size: clamp(1.3rem, 3vw, 1.65rem);
   font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.025em;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
 }
 
-.card-info p {
+.card-info > p:last-child {
   color: var(--secondary-text);
-  font-size: 0.92rem;
-  line-height: 1.6;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* Connect card */
+
+.connect-card {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.connect-image {
+  height: 190px;
+}
+
+.connect-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.6rem;
+}
+
+.social-links {
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.social-links a {
+  display: flex;
+  min-height: 47px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    padding 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.social-links a:hover {
+  padding-left: 5px;
+  color: var(--blue);
+}
+
+.social-arrow {
+  color: var(--secondary-text);
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover .social-arrow {
+  color: var(--blue);
+  transform: translate(2px, -2px);
 }
 
 /* Footer */
@@ -449,7 +489,6 @@ main,
   padding: 3.2rem max(20px, 5vw);
   border-top: 1px solid var(--border);
   color: var(--text);
-  transition: border-color var(--transition);
 }
 
 .footer-main {
@@ -489,7 +528,7 @@ main,
   width: min(100%, 1120px);
   margin: 12px auto 0;
   font-size: 0.69rem;
-  opacity: 0.28;
+  opacity  opacity: 0.28;
 }
 
 /* Legal overlays */
@@ -612,7 +651,7 @@ main,
   opacity: 0.7;
 }
 
-/* Accessibility */
+/* Keyboard accessibility */
 
 a:focus-visible,
 .theme-toggle:focus-visible {
@@ -620,27 +659,17 @@ a:focus-visible,
   outline-offset: 5px;
 }
 
-/* Tablet */
+/* Smaller desktop and tablet */
 
-@media (max-width: 760px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-main {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .legal-links {
-    justify-content: flex-start;
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(230px, 1fr);
   }
 }
 
 /* Mobile */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   html {
     scroll-padding-top: 100px;
   }
@@ -673,21 +702,24 @@ a:focus-visible,
     max-width: 300px;
   }
 
-  .projects-grid {
+  .profile-grid {
+    grid-template-columns: 1fr;
     width: calc(100% - 28px);
     gap: 20px;
     padding-bottom: 70px;
   }
 
-  .project-card {
+  .profile-card {
     border-radius: 24px;
   }
 
-  .card-image-wrapper {
+  .card-image-wrapper,
+  .connect-image {
     height: 210px;
   }
 
-  .card-info {
+  .card-info,
+  .connect-info {
     padding: 1.5rem;
   }
 
@@ -695,7 +727,14 @@ a:focus-visible,
     padding: 2.6rem 20px;
   }
 
+  .footer-main {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .legal-links {
+    justify-content: flex-start;
     gap: 13px;
   }
 
