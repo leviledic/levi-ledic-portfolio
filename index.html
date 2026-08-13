@@ -8,11 +8,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Levi Ledic | Robotics, Technology, Design & Soccer</title>
+  <title>Levi Ledic | Official Profile</title>
 
   <meta
     name="description"
-    content="Official profile of Levi Ledic, a Wisconsin student, builder, soccer player, and VEX Robotics competitor interested in technology, design, 3D printing, ESP32 development, automation, smart spaces, and web development."
+    content="Official profile of Levi Ledic, a Wisconsin student interested in soccer, robotics, technology, design, 3D printing, smart spaces, automation, and hands-on projects."
   >
 
   <meta name="author" content="Levi Ledic">
@@ -33,7 +33,7 @@
 
   <meta
     property="og:description"
-    content="Official profile of Levi Ledic, a Wisconsin student interested in robotics, technology, design, soccer, 3D printing, automation, and smart spaces."
+    content="The official profile of Levi Ledic, featuring soccer, robotics, technology, design, projects, and interests."
   >
 
   <meta
@@ -61,7 +61,7 @@
 
   <meta
     name="twitter:description"
-    content="Wisconsin student, builder, soccer player, and VEX Robotics competitor interested in technology, design, automation, and smart spaces."
+    content="The official profile of Levi Ledic, featuring soccer, robotics, technology, design, projects, and interests."
   >
 
   <meta
@@ -83,9 +83,9 @@
   >
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=7">
 
-  <!-- Structured data -->
+  <!-- Structured data for search engines and AI systems -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -96,7 +96,7 @@
         "url": "https://leviledic.github.io/levi-ledic-portfolio/",
         "name": "Levi Ledic | Official Profile",
         "headline": "Levi Ledic",
-        "description": "Official profile of Levi Ledic, a Wisconsin student, builder, soccer player, and VEX Robotics competitor interested in technology, design, 3D printing, ESP32 development, automation, smart spaces, and web development.",
+        "description": "Official profile of Levi Ledic, a Wisconsin student interested in soccer, robotics, technology, design, 3D printing, smart spaces, automation, and hands-on projects.",
         "inLanguage": "en-US",
         "isPartOf": {
           "@id": "https://leviledic.github.io/levi-ledic-portfolio/#website"
@@ -115,15 +115,17 @@
         "givenName": "Levi",
         "familyName": "Ledic",
         "url": "https://leviledic.github.io/levi-ledic-portfolio/",
-        "description": "Levi Ledic is a Wisconsin student, builder, soccer player, and VEX Robotics competitor interested in robotics, technology, design, web development, automation, smart spaces, ESP32 development, 3D printing, and hands-on engineering projects.",
+        "description": "Levi Ledic is a Wisconsin student interested in soccer, robotics, technology, design, web development, smart spaces, ESP32 development, 3D printing, automation, and hands-on projects.",
         "sameAs": [
-          "https://www.instagram.com/leviledic/"
+          "https://www.instagram.com/leviledic/",
+          "https://www.tiktok.com/@levi.ledic",
+          "https://www.duolingo.com/profile/LeviLedic",
+          "https://github.com/leviledic"
         ],
         "knowsAbout": [
+          "Soccer",
           "Robotics",
           "VEX Robotics",
-          "Competitive robotics",
-          "Soccer",
           "Technology",
           "Design",
           "Web development",
@@ -134,7 +136,7 @@
           "Embedded systems",
           "3D printing",
           "Prototyping",
-          "Hands-on engineering projects"
+          "Hands-on projects"
         ],
         "mainEntityOfPage": {
           "@id": "https://leviledic.github.io/levi-ledic-portfolio/#profilepage"
@@ -182,8 +184,8 @@
 
       <ul class="nav-links">
         <li><a href="#profile">Profile</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#connect">Connect</a></li>
       </ul>
 
       <label
@@ -211,59 +213,89 @@
       </header>
 
       <section
-        id="interests"
-        class="projects-grid"
-        aria-label="Levi Ledic interests and experience"
+        class="profile-grid"
+        aria-label="About and connect with Levi Ledic"
       >
-        <article class="project-card">
-          <div class="card-image-wrapper">
+        <!-- 75% About card -->
+
+        <article class="profile-card about-card" id="about">
+          <div class="card-image-wrapper about-image">
             <div
               class="card-image"
               role="img"
-              aria-label="Technology and robotics"
+              aria-label="Forest landscape"
               style="background-image: url('hero-forest.jpg');"
             ></div>
           </div>
 
-          <div class="card-info">
-            <div class="tags" aria-label="Main interests">
-              <span class="tag">Robotics</span>
-              <span class="tag">Technology</span>
-              <span class="tag">Design</span>
-            </div>
+          <div class="card-info about-info">
+            <p class="card-label">Profile</p>
 
-            <h2>Building and Technology</h2>
+            <h2>About Me</h2>
 
             <p>
-              I like developing web ideas, smart spaces, automation,
-              ESP32 projects, 3D-printed prototypes, and hands-on systems.
+              I’m Levi. I play competitive soccer and spend a lot of my time
+              creating, experimenting, and learning how things work. My
+              interests include technology, robotics, design, 3D printing,
+              smart spaces, and building ideas into real projects.
             </p>
           </div>
         </article>
 
-        <article class="project-card" id="experience">
-          <div class="card-image-wrapper">
+        <!-- 25% Connect card -->
+
+        <article class="profile-card connect-card" id="connect">
+          <div class="card-image-wrapper connect-image">
             <div
               class="card-image card-image-ocean"
               role="img"
               aria-label="Dark ocean waves photographed by Michael Benz"
-              style="background-image: url('photo2.jpg');"
+              style="background-image: url('michael-benz-IgWNxx7paz4-unsplash.jpg');"
             ></div>
           </div>
 
-          <div class="card-info">
-            <div class="tags" aria-label="Activities and experience">
-              <span class="tag">VEX Robotics</span>
-              <span class="tag">Soccer</span>
-            </div>
+          <div class="card-info connect-info">
+            <p class="card-label">Elsewhere</p>
 
-            <h2>Competition and Experience</h2>
+            <h2>Connect</h2>
 
-            <p>
-              I competed as part of a VEX Robotics team that advanced to
-              the state level and received an official VEX award. I also
-              play competitive soccer.
-            </p>
+            <nav class="social-links" aria-label="Levi Ledic social profiles">
+              <a
+                href="https://www.instagram.com/leviledic/"
+                target="_blank"
+                rel="me noopener noreferrer"
+              >
+                <span>Instagram</span>
+                <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@levi.ledic"
+                target="_blank"
+                rel="me noopener noreferrer"
+              >
+                <span>TikTok</span>
+                <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="https://www.duolingo.com/profile/LeviLedic"
+                target="_blank"
+                rel="me noopener noreferrer"
+              >
+                <span>Duolingo</span>
+                <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/leviledic"
+                target="_blank"
+                rel="me noopener noreferrer"
+              >
+                <span>GitHub</span>
+                <span class="social-arrow" aria-hidden="true">↗</span>
+              </a>
+            </nav>
           </div>
         </article>
       </section>
@@ -329,24 +361,25 @@
 
         <p>
           This website is hosted using GitHub Pages. GitHub may automatically
-          process limited technical information, such as IP addresses, browser
-          details, device information, and server logs, as part of providing,
-          securing, and operating its hosting service.
+          process limited technical information, including IP addresses,
+          browser details, device information, and server logs, as part of
+          providing and securing its hosting service.
         </p>
 
-        <h3>External resources</h3>
+        <h3>External websites</h3>
 
         <p>
-          This website may load resources or contain links provided by third
-          parties. Those services operate under their own privacy policies and
-          practices.
+          This website links to Instagram, TikTok, Duolingo, GitHub, YouTube,
+          and potentially other third-party services. Those services operate
+          independently under their own privacy policies, terms, data
+          practices, and security procedures.
         </p>
 
         <h3>Cookies</h3>
 
         <p>
           This website does not intentionally set advertising or analytics
-          cookies. Its hosting provider or external services may use technical
+          cookies. Its hosting provider or linked services may use technical
           storage when necessary to provide their services.
         </p>
 
@@ -414,7 +447,7 @@
 
         <p>
           This website is a personal profile provided for general
-          informational purposes. Content is not professional, legal,
+          informational purposes. Its content is not professional, legal,
           financial, medical, technical, or safety advice.
         </p>
 
@@ -510,7 +543,7 @@
         </p>
 
         <p>
-          Accessibility improvements may continue as the site changes.
+          Accessibility improvements may continue as the website changes.
         </p>
       </article>
     </section>
