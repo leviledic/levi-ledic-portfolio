@@ -2,243 +2,498 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Levi Ledic | Personal Site</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
+  <title>Levi Ledic | Profile, Projects & Interests</title>
+
   <meta
     name="description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, design, soccer, robotics, VEX Robotics, 3D printing, smart spaces, hands-on projects, web ideas, and learning."
+    content="Official profile of Levi Ledic, a Wisconsin student interested in robotics, VEX Robotics, soccer, technology, design, 3D printing, smart spaces, web development, automation, and hands-on projects."
   >
+
   <meta name="author" content="Levi Ledic">
   <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#f7f4ee">
-  <link rel="canonical" href="https://leviledic.github.io/levi-ledic-portfolio/">
+  <meta name="theme-color" content="#f4f4f2">
+  <meta name="color-scheme" content="light">
+
+  <link
+    rel="canonical"
+    href="https://leviledic.github.io/levi-ledic-portfolio/"
+  >
+
+  <!-- Open Graph -->
   <meta property="og:site_name" content="Levi Ledic">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Levi Ledic | Personal Site">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Levi Ledic | Profile">
   <meta
     property="og:description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, design, soccer, robotics, VEX Robotics, 3D printing, smart spaces, hands-on projects, web ideas, and learning."
+    content="The official profile of Levi Ledic: student, builder, robotics competitor, soccer player, designer, and technology enthusiast."
   >
-  <meta property="og:url" content="https://leviledic.github.io/levi-ledic-portfolio/">
-  <meta property="og:image" content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png">
-  <meta property="og:image:alt" content="Minimal preview image for Levi Ledic's personal site">
+  <meta
+    property="og:url"
+    content="https://leviledic.github.io/levi-ledic-portfolio/"
+  >
+  <meta
+    property="og:image"
+    content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png"
+  >
+  <meta
+    property="og:image:secure_url"
+    content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png"
+  >
+  <meta
+    property="og:image:alt"
+    content="Profile preview for Levi Ledic"
+  >
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Levi Ledic | Personal Site">
+  <meta name="twitter:title" content="Levi Ledic | Profile">
   <meta
     name="twitter:description"
-    content="Personal site of Levi Ledic, featuring hobbies, projects, interests, design, soccer, robotics, VEX Robotics, 3D printing, smart spaces, hands-on projects, web ideas, and learning."
+    content="The official profile of Levi Ledic: robotics, soccer, design, technology, smart spaces, 3D printing, and hands-on projects."
   >
-  <meta name="twitter:image" content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png">
-  <meta name="twitter:image:alt" content="Minimal preview image for Levi Ledic's personal site">
+  <meta
+    name="twitter:image"
+    content="https://leviledic.github.io/levi-ledic-portfolio/og-preview.png"
+  >
+  <meta
+    name="twitter:image:alt"
+    content="Profile preview for Levi Ledic"
+  >
+
+  <!-- Icons -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicon-32x32.png"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    href="apple-touch-icon.png"
+  >
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data for search engines and AI systems -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "ProfilePage",
-          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#profilepage",
-          "url": "https://leviledic.github.io/levi-ledic-portfolio/",
-          "name": "Levi Ledic | Personal Site",
-          "description": "Personal site of Levi Ledic, featuring hobbies, projects, interests, design, soccer, robotics, VEX Robotics, 3D printing, smart spaces, hands-on projects, web ideas, and learning.",
-          "inLanguage": "en-US",
-          "isPartOf": {
-            "@id": "https://leviledic.github.io/levi-ledic-portfolio/#website"
-          },
-          "about": {
-            "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
-          },
-          "mainEntity": {
-            "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
-          }
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://leviledic.github.io/levi-ledic-portfolio/#profilepage",
+        "url": "https://leviledic.github.io/levi-ledic-portfolio/",
+        "name": "Levi Ledic | Profile",
+        "headline": "Levi Ledic",
+        "description": "Official profile of Levi Ledic, a Wisconsin student interested in robotics, VEX Robotics, soccer, technology, design, 3D printing, smart spaces, web development, automation, and hands-on projects.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#website"
         },
-        {
-          "@type": "Person",
-          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person",
-          "name": "Levi Ledic",
-          "url": "https://leviledic.github.io/levi-ledic-portfolio/",
-          "email": "mailto:levi.ledic27@gmail.com",
-          "description": "Levi Ledic's personal site featuring hobbies, projects, soccer, design, robotics, VEX Robotics, smart spaces, 3D printing, hands-on projects, web ideas, and learning.",
-          "sameAs": [
-            "https://www.instagram.com/leviledic/"
-          ],
-          "knowsAbout": [
-            "Soccer",
-            "Design",
-            "Building",
-            "Smart spaces",
-            "Robotics",
-            "VEX Robotics",
-            "3D printing",
-            "Hands-on projects",
-            "Web ideas",
-            "Learning"
-          ],
-          "mainEntityOfPage": {
-            "@id": "https://leviledic.github.io/levi-ledic-portfolio/#profilepage"
-          }
+        "about": {
+          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
         },
-        {
-          "@type": "WebSite",
-          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#website",
-          "url": "https://leviledic.github.io/levi-ledic-portfolio/",
-          "name": "Levi Ledic",
-          "description": "Personal site of Levi Ledic featuring hobbies, interests, experience, projects, and learning.",
-          "inLanguage": "en-US",
-          "publisher": {
-            "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
-          }
+        "mainEntity": {
+          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
         }
-      ]
-    }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person",
+        "name": "Levi Ledic",
+        "givenName": "Levi",
+        "familyName": "Ledic",
+        "url": "https://leviledic.github.io/levi-ledic-portfolio/",
+        "email": "mailto:levi.ledic27@gmail.com",
+        "description": "Levi Ledic is a Wisconsin student interested in robotics, VEX Robotics, soccer, technology, design, smart spaces, 3D printing, web development, automation, and hands-on projects.",
+        "sameAs": [
+          "https://www.instagram.com/leviledic/"
+        ],
+        "knowsAbout": [
+          "Robotics",
+          "VEX Robotics",
+          "Soccer",
+          "Technology",
+          "Design",
+          "Web development",
+          "Automation",
+          "Smart spaces",
+          "Home Assistant",
+          "ESP32 development",
+          "3D printing",
+          "Prototyping",
+          "Hands-on engineering projects"
+        ],
+        "mainEntityOfPage": {
+          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#profilepage"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://leviledic.github.io/levi-ledic-portfolio/#website",
+        "url": "https://leviledic.github.io/levi-ledic-portfolio/",
+        "name": "Levi Ledic",
+        "alternateName": "Levi Ledic Profile",
+        "description": "The official personal website and profile of Levi Ledic.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@id": "https://leviledic.github.io/levi-ledic-portfolio/#person"
+        }
+      }
+    ]
+  }
   </script>
-  <link rel="stylesheet" href="/style.css?v=20260722">
 </head>
-<body class="page page-home">
-  <a class="skip-link" href="#main-content">Skip to content</a>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to profile</a>
+
+  <div class="page-background" aria-hidden="true">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+  </div>
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="site-brand" href="./" aria-label="Levi Ledic home">Levi Ledic</a>
+      <a class="brand" href="#" aria-label="Levi Ledic profile">
+        <span class="brand-mark" aria-hidden="true">L</span>
+        <span>Levi Ledic</span>
+      </a>
 
-      <nav class="site-nav" aria-label="Primary">
-        <a href="./" aria-current="page">Home</a>
-        <a href="interests.html">Interests</a>
-        <a href="experience.html">Experience</a>
+      <nav class="navigation" aria-label="Profile navigation">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#experience">Experience</a>
+        <a href="#connect">Connect</a>
       </nav>
     </div>
   </header>
 
   <main id="main-content" class="shell">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Personal site</p>
-        <h1>Hello, I'm Levi.</h1>
-        <p class="lede">This is my personal site.</p>
-        <p>
-          I'm Levi Ledic. I like soccer, design, building, smart spaces, robotics, VEX Robotics,
-          3D printing, hands-on projects, web ideas, and learning.
-        </p>
-        <p>
-          This site is a simple public home for my interests, projects, timeline, and a few of the
-          things I keep coming back to. It also connects to my Instagram.
-        </p>
+    <section class="profile-card" aria-labelledby="profile-name">
+      <div class="profile-top">
+        <div class="avatar" aria-hidden="true">
+          <span>LL</span>
+        </div>
 
-        <div class="inline-links" aria-label="Main site links">
-          <a href="interests.html">Hobbies &amp; Interests</a>
-          <a href="experience.html">Experience &amp; Timeline</a>
-          <a href="https://www.instagram.com/leviledic/?__d=1" target="_blank" rel="me noopener noreferrer">Instagram</a>
+        <div class="profile-identity">
+          <p class="status">
+            <span class="status-dot"></span>
+            Building and learning
+          </p>
+
+          <h1 id="profile-name">Levi Ledic</h1>
+
+          <p class="profile-role">
+            Student · Builder · Robotics competitor
+          </p>
         </div>
       </div>
 
-      <aside class="hero-note" aria-label="Site overview">
-        <p class="eyebrow">On this site</p>
-        <ul class="compact-list">
-          <li>Hobbies and interests</li>
-          <li>Experience and timeline</li>
-          <li>Robotics and VEX Robotics</li>
-          <li>Design, soccer, and building</li>
-          <li>Smart spaces, web ideas, and learning</li>
-        </ul>
-      </aside>
-    </section>
-
-    <section class="section">
-      <div class="section-heading">
-        <p class="eyebrow">A few interests</p>
-        <h2>Things I keep coming back to.</h2>
-      </div>
-
-      <div class="feature-grid">
-        <article class="simple-card">
-          <p class="card-index">01</p>
-          <h3>Soccer</h3>
-          <p>Timing, movement, teamwork, and quick decisions.</p>
-        </article>
-
-        <article class="simple-card">
-          <p class="card-index">02</p>
-          <h3>Design</h3>
-          <p>Clean layouts, simple pages, and things that feel easy to use.</p>
-        </article>
-
-        <article class="simple-card">
-          <p class="card-index">03</p>
-          <h3>Robotics</h3>
-          <p>Building, testing, competing, and learning through robotics and VEX.</p>
-        </article>
-
-        <article class="simple-card">
-          <p class="card-index">04</p>
-          <h3>Hands-On Projects</h3>
-          <p>3D printing, prototypes, hardware ideas, and physical builds.</p>
-        </article>
-      </div>
-
-      <p class="section-link">
-        <a href="interests.html">See all hobbies and interests</a>
+      <p class="profile-introduction">
+        I’m interested in the point where technology, design, and real-world
+        building meet. I work on robotics, software, automation, smart spaces,
+        3D printing, and other hands-on ideas—and I play competitive soccer.
       </p>
-    </section>
 
-    <section class="section">
-      <div class="page-grid">
-        <article class="page-card">
-          <p class="eyebrow">Page 01</p>
-          <h2>Hobbies &amp; Interests</h2>
-          <p>
-            A simple page covering soccer, design, building, smart spaces, robotics, 3D printing,
-            web ideas, hands-on projects, and learning.
-          </p>
-          <a href="interests.html">Open interests</a>
-        </article>
+      <div class="profile-actions">
+        <a
+          class="button button-primary"
+          href="https://www.instagram.com/leviledic/"
+          target="_blank"
+          rel="me noopener noreferrer"
+        >
+          Instagram
+          <span aria-hidden="true">↗</span>
+        </a>
 
-        <article class="page-card">
-          <p class="eyebrow">Page 02</p>
-          <h2>Experience &amp; Timeline</h2>
-          <p>
-            A simple timeline covering early curiosity, web ideas, design, smart spaces, VEX
-            Robotics, hands-on projects, and the start of this personal site.
-          </p>
-          <a href="experience.html">Open timeline</a>
-        </article>
+        <a
+          class="button button-secondary"
+          href="mailto:levi.ledic27@gmail.com"
+        >
+          Email me
+        </a>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="section-heading">
-        <p class="eyebrow">Contact</p>
-        <h2>Elsewhere.</h2>
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="section-label">
+        <span>01</span>
+        <p>Profile</p>
       </div>
 
-      <ul class="contact-list">
-        <li>
+      <div class="section-content">
+        <h2 id="about-title">About me</h2>
+
+        <div class="about-copy">
+          <p>
+            I’m Levi Ledic, a student from Wisconsin who enjoys creating
+            things that combine technical problem-solving with clean,
+            thoughtful design.
+          </p>
+
+          <p>
+            My projects span robotics, web development, ESP32 hardware,
+            automation, smart-home systems, 3D printing, physical prototypes,
+            and experimental software. I like taking an idea, understanding
+            how its parts work, and developing it into something useful.
+          </p>
+
+          <p>
+            Outside of technology, soccer is one of my main interests. It has
+            helped me develop teamwork, awareness, discipline, quick
+            decision-making, and the ability to keep improving through
+            repetition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section"
+      id="interests"
+      aria-labelledby="interests-title"
+    >
+      <div class="section-label">
+        <span>02</span>
+        <p>Focus</p>
+      </div>
+
+      <div class="section-content">
+        <h2 id="interests-title">Interests</h2>
+
+        <div class="interest-grid">
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">◉</span>
+            <h3>Robotics</h3>
+            <p>
+              Designing, building, testing, competing, and improving systems
+              through VEX Robotics and independent robotics projects.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">⌘</span>
+            <h3>Technology</h3>
+            <p>
+              Exploring software, ESP32 development, automation, connected
+              devices, web applications, and practical AI systems.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">◇</span>
+            <h3>Design</h3>
+            <p>
+              Creating clean interfaces, minimal visual systems, useful
+              layouts, and experiences that feel simple to understand.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">△</span>
+            <h3>Building</h3>
+            <p>
+              Turning ideas into physical prototypes through 3D printing,
+              hardware, experimentation, and hands-on problem-solving.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">⌂</span>
+            <h3>Smart spaces</h3>
+            <p>
+              Connecting sensors, dashboards, lighting, security, and
+              automation to make spaces more responsive and useful.
+            </p>
+          </article>
+
+          <article class="interest-card">
+            <span class="card-symbol" aria-hidden="true">●</span>
+            <h3>Soccer</h3>
+            <p>
+              Developing movement, awareness, coordination, discipline,
+              teamwork, and quick decisions through competitive play.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="content-section"
+      id="experience"
+      aria-labelledby="experience-title"
+    >
+      <div class="section-label">
+        <span>03</span>
+        <p>Experience</p>
+      </div>
+
+      <div class="section-content">
+        <h2 id="experience-title">What I’ve worked on</h2>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <div class="experience-marker" aria-hidden="true"></div>
+
+            <div>
+              <p class="experience-type">Robotics competition</p>
+              <h3>VEX Robotics</h3>
+              <p>
+                Worked as part of a VEX Robotics team, developed competition
+                experience, advanced to the state level, and contributed to
+                a team that received an official VEX award.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-marker" aria-hidden="true"></div>
+
+            <div>
+              <p class="experience-type">Software and systems</p>
+              <h3>Web development and automation</h3>
+              <p>
+                Built and planned web applications, dashboards, automation
+                tools, personal systems, and connected experiences designed
+                to make information easier to manage.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-marker" aria-hidden="true"></div>
+
+            <div>
+              <p class="experience-type">Hardware and prototyping</p>
+              <h3>ESP32, robotics, and 3D printing</h3>
+              <p>
+                Experimented with embedded hardware, sensors, robotics,
+                local interfaces, 3D-printed parts, prototypes, and physical
+                systems that connect software with the real world.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-item">
+            <div class="experience-marker" aria-hidden="true"></div>
+
+            <div>
+              <p class="experience-type">Connected environments</p>
+              <h3>Smart spaces</h3>
+              <p>
+                Explored smart lighting, dashboards, Home Assistant,
+                automation, monitoring, access systems, and other technology
+                for more intelligent spaces.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section profile-facts" aria-labelledby="facts-title">
+      <div class="section-label">
+        <span>04</span>
+        <p>Details</p>
+      </div>
+
+      <div class="section-content">
+        <h2 id="facts-title">Profile details</h2>
+
+        <dl class="facts-list">
+          <div>
+            <dt>Name</dt>
+            <dd>Levi Ledic</dd>
+          </div>
+
+          <div>
+            <dt>Based in</dt>
+            <dd>Wisconsin, United States</dd>
+          </div>
+
+          <div>
+            <dt>Primary interests</dt>
+            <dd>Technology, robotics, design, building, and soccer</dd>
+          </div>
+
+          <div>
+            <dt>Robotics experience</dt>
+            <dd>VEX Robotics competition and state-level experience</dd>
+          </div>
+
+          <div>
+            <dt>Tools and fields</dt>
+            <dd>
+              Web development, ESP32, 3D printing, smart spaces, automation,
+              and prototyping
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section
+      class="connect-card"
+      id="connect"
+      aria-labelledby="connect-title"
+    >
+      <div>
+        <p class="section-kicker">Connect</p>
+        <h2 id="connect-title">Find me elsewhere.</h2>
+        <p>
+          Follow my work and interests on Instagram or contact me by email.
+        </p>
+      </div>
+
+      <div class="connect-links">
+        <a
+          href="https://www.instagram.com/leviledic/"
+          target="_blank"
+          rel="me noopener noreferrer"
+        >
           <span>Instagram</span>
-          <a href="https://www.instagram.com/leviledic/?__d=1" target="_blank" rel="me noopener noreferrer">instagram.com/leviledic</a>
-        </li>
-        <li>
+          <strong>@leviledic ↗</strong>
+        </a>
+
+        <a href="mailto:levi.ledic27@gmail.com">
           <span>Email</span>
-          <a href="mailto:levi.ledic27@gmail.com">levi.ledic27@gmail.com</a>
-        </li>
-      </ul>
+          <strong>Send a message →</strong>
+        </a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <p>Levi Ledic</p>
-      <div class="footer-links">
-        <a href="interests.html">Interests</a>
-        <a href="experience.html">Experience</a>
-        <a href="https://www.instagram.com/leviledic/?__d=1" target="_blank" rel="me noopener noreferrer">Instagram</a>
-        <a href="mailto:levi.ledic27@gmail.com">Email</a>
-      </div>
+      <p>© <span id="current-year">2026</span> Levi Ledic</p>
+      <p>Personal profile · Wisconsin</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
